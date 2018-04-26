@@ -19,11 +19,11 @@
 <template name="editArticle">
   <form class="editArticle">
     <label>Titre :</label><br/>
-    <input type="text" name="titre" /><br />
+    <input type="text" name="titre" value="{{selectedArticle.titre}}" /><br />
     <label>Chapô :</label><br />
-    <input type="text" name="chapo" /><br />
+    <input type="text" name="chapo" value="{{selectedArticle.chapo}}"/><br />
     <label>Contenu :</label><br />
-    <textarea name="contenu"></textarea>
+    <textarea name="contenu">{{selectedArticle.contenu}}</textarea>
     <hr />
     <button>Valider</button>
     <a href="/" class="annuler">Annuler</a>
@@ -31,7 +31,11 @@
 </template>
 
 <template name="article">
-  <li>{{titre}}</li>
+  {{#if isOwner}}
+  <li class="ev_selectArticle">{{titre}}<span class="ev_removeMe">[X]</span></li>
+  {{else}}
+    <li class="">{{titre}}</li>
+  {{/if}}
 </template>
 
 
