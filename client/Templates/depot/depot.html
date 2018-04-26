@@ -1,0 +1,39 @@
+<template name="depot">
+  <h1>Dépot</h1>
+  <div class="liste_depots">
+    <p>Liste des dépot de l'utilisateur <b>{{currentUser.username }}</b></p>
+    <ul>
+      {{#each articles}}
+        {{> article}}  
+      {{else}}
+        <p>Pas encore d'articles... :-(</p>
+      {{/each}}
+    </ul>
+  </div>
+  <div class="ajouter_un_depot">
+    {{> editArticle }}
+  </div>
+</template>
+
+
+<template name="editArticle">
+  <form class="editArticle">
+    <label>Titre :</label><br/>
+    <input type="text" name="titre" /><br />
+    <label>Chapô :</label><br />
+    <input type="text" name="chapo" /><br />
+    <label>Contenu :</label><br />
+    <textarea name="contenu"></textarea>
+    <hr />
+    <button>Valider</button>
+    <a href="/" class="annuler">Annuler</a>
+  </form>
+</template>
+
+<template name="article">
+  <li>{{titre}}</li>
+</template>
+
+
+
+

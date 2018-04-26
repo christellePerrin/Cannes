@@ -1,0 +1,29 @@
+<head>
+  <title>cannes</title>
+</head>
+
+<body>
+</body>
+
+<template name="ApplicationLayout">
+  <header>
+    <h1>CANNES</h1>
+    <a href="/">HOME</a>
+    {{#if currentUser}}
+      <a href="/depot">Dépot</a>
+      <a href="/restitution">Rendu</a>
+      {{> logout }}
+    {{else}}
+      <p>Vous devez vous connecter...</p>
+      <a href="/login">Se connecter</a>
+    {{/if}}
+  </header>
+  <article>
+    {{> yield}}
+  </article>
+
+  <footer>
+    {{> yield "footer"}}
+  </footer>
+</template>
+
