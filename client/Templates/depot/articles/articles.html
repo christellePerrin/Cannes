@@ -29,7 +29,7 @@
       {{> showArticleImage image_id}}
     {{/if}}
     <input type="hidden" name="image_id" value="{{selectedArticle.image_id}}" />
-    <label>"{{selectedArticle.createdAt}}"</label> <br/>
+    <label>Date : {{formatedDate selectedArticle.createdAt}}</label> <br/>
     <label>*Titre :</label><br/>
     <input type="text" name="titre" value="{{selectedArticle.titre}}" /><br />
 
