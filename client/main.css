@@ -103,7 +103,7 @@ a, button{
   color: white;
 }
 
-.toolbar:active{
+a.active{
   outline: solid black;
   background-color: red;
   color: black;

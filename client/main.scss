@@ -1,16 +1,18 @@
 .grid-container {
 
-  display: grid;
-  grid-template-columns: 10px 20% 20% 20% 20% 10px;
-  grid-template-rows: auto;
-  background-color: black;
+    display: grid;
+    grid-template-columns: 10px 20% 20% 20% 20% 10px;
+    grid-template-rows: auto;
+    background-color: black;
 
-.header_toolbar{
-  padding: 10px;
-  grid-column-start: 2;
-  grid-column-end: 5;
-  grid-row-start: 1;
-  grid-row-end: 2;
-  background-color: blue;
+  .header_toolbar{
+    padding: 10px;
+    grid-column-start: 2;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    background-color: blue;
+  }
 }
-}
+
+
