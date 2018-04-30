@@ -13,6 +13,7 @@ Template.uploadForm.events({
     if (e.currentTarget.files && e.currentTarget.files[0]) {
       // We upload only one file, in case
       // multiple files were selected
+      instance = template;
       const upload = Images.insert({
         file: e.currentTarget.files[0],
         streams: 'dynamic',
@@ -27,7 +28,11 @@ Template.uploadForm.events({
         if (error) {
           alert('Error during upload: ' + error);
         } else {
-          alert('File "' + fileObj.name + '" successfully uploaded');
+          //alert('File "' + fileObj.name + '" successfully uploaded');
+          var image_id = fileObj._id;
+
+          $("input[name=image_id]").val(image_id);
+
         }
         template.currentUpload.set(false);
       });

@@ -13,6 +13,10 @@
       {{/each}}
     </ul>
   </div>
+  <div class="article_add_images">
+    <h1>Ajouter une image</h1>
+    {{> uploadForm }}
+  </div>
   <div class="ajouter_un_depot">
     {{> editArticle }}
   </div>
@@ -21,7 +25,11 @@
 
 <template name="editArticle">
   <form class="editArticle">
-    <label>"{{article.createdAt}}"</label> <br/>
+    {{#if articleHasImage image_id}}
+      {{> showArticleImage image_id}}
+    {{/if}}
+    <input type="hidden" name="image_id" value="{{selectedArticle.image_id}}" />
+    <label>"{{selectedArticle.createdAt}}"</label> <br/>
     <label>*Titre :</label><br/>
     <input type="text" name="titre" value="{{selectedArticle.titre}}" /><br />
 
@@ -56,4 +64,12 @@
   {{else}}
 
   {{/if}}
+</template>
+
+
+<template name="showArticleImage">
+  <p>Mon image ici</p>
+  {{#with showImage}}
+    <img class="preview" src="{{link}}" alt="{{name}}" />
+  {{/with}}
 </template>

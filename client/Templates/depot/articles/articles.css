@@ -1,0 +1,8 @@
+div.article_add_images {
+  border: 1px solid black;
+  float: right;
+}
+
+img.preview {
+  width: 100px;
+}
