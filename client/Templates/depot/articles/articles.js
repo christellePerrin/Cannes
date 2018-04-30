@@ -39,13 +39,13 @@ Template.editArticle.events({
   }
 });
 
-Template.depot.helpers({
+Template.depotarticles.helpers({
   "articles" : function(){
     return Article.find();
   }
 })
 
-Template.depot.events({
+Template.depotarticles.events({
   "click li.ev_selectArticle" : function(e,t){
     console.log(this);
     selectedArticle.set(this);

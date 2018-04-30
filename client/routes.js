@@ -13,6 +13,15 @@ Router.route('/depot', function () {
     this.render('depot');
 });
 
+// Configuration de la route des dépots
+Router.route('/depot/articles', function () {
+    this.render('depotarticles');
+});
+
+// Configuration de la route des dépots
+Router.route('/depot/images', function () {
+    this.render('depotimages');
+});
 
 // Configuration de la route des dépots
 Router.route('/login', function () {
