@@ -37,7 +37,7 @@ Template.showArticleImage.helpers({
 Template.editArticle.events({
   "submit form.editArticle" :function(e,t){
     e.preventDefault();
-    var article = {titre:"", soustitre:"", chapo:"", contenu:"", createdAt : + new Date(), owner: Meteor.userId()};
+    var article = {titre:"", isArticle: true, soustitre:"", chapo:"", contenu:"", createdAt : + new Date(), owner: Meteor.userId()};
     article.image_id = t.find("input[name=image_id]").value;
     article.titre = t.find("input[name=titre]").value.trim();
     article.soustitre = t.find("input[name=soustitre]").value.trim();
@@ -47,14 +47,18 @@ Template.editArticle.events({
     //console.log("Coucou",article );
     //empecher champs vides
     if(article.titre != "" && article.chapo != "" && article.contenu != ""){
+
       if(selectedArticle.get() ===undefined){
         // Naouvel article
-        Article.insert(article);
+        article_id = Article.insert(article);
       } else {
         // Mise à jour d'un article existant
         //Article.upsert(selectedArticle.get()._id, {$set:article});
-        Article.update(selectedArticle.get()._id, {$set:article});
+        article_id = Article.update(selectedArticle.get()._id, {$set:article});
       }
+      // var i = Images.findOne(article.image_id);
+      // i.meta.parent_id = article_id;
+      // Images.update({_id:article.image_id}, {$set:i});
 
       var form = t.find("form.editArticle");
       //nettoyer apres envoi

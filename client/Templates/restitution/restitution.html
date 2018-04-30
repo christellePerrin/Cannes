@@ -1,7 +1,10 @@
-
-
 <template name="restitution">
-
+  {{#each medias}}
+    {{> showMedia}}
+  {{else}}
+    <p>Pas dmédias</p>
+  {{/each}}
+  <!--
 <div class="grid-container">
   <div class="titre">
 titre
@@ -17,5 +20,24 @@ titre
   </div>
 
 </div>
+-->
+</template>
 
+
+<template name="showMedia">
+  <div class="media">
+    <div class="medias">
+      {{> render}}
+    </div>
+  </div>
+</template>
+
+
+
+<template name="mediaImage">
+    <img class="preview" src="{{link}}" alt="{{name}}" />
+</template>
+<template name="mediaArticle">
+<p>{{titre}}</p>
+{{> showArticleImage}}
 </template>
