@@ -1,1 +1,214 @@
-/* CSS declarations go here */
+
+@font-face {
+    font-family: 'ocl2';
+    src: url('ocl-2.eot');
+    src: url('ocl-2.eot?#iefix') format('embedded-opentype'),
+         url('ocl-2.woff2') format('woff2'),
+         url('ocl-2.woff') format('woff'),
+         url('ocl-2.ttf') format('truetype'),
+         url('ocl-2.svg#ocl2') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+h {
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: 10px 0px 10px 0px;
+  font-size: 1EM;
+  font-weight: normal;
+  font-family: "Fantasque Sans Mono", monospace;
+}
+
+h1 {
+  padding-left: 10px;
+  padding-top: 2px;
+  padding-right: 10px;
+  padding-bottom: 2px;
+  font-size: 1EM;
+  font-weight: normal;
+  background-color: #2f00ff; /*bleu(17,0,255); vert d'eau clair#e1ffff;*/
+  font-family: "Fantasque Sans Mono", monospace;
+}
+
+h2{
+  font-family: 'ocl2',sans-serif;
+  src: url('ocl-2.eot');
+  src: url('ocl-2.eot?#iefix') format('embedded-opentype'),
+       url('ocl-2.woff2') format('woff2'),
+       url('ocl-2.woff') format('woff'),
+       url('ocl-2.ttf') format('truetype'),
+       url('ocl-2.svg#ocl2') format('svg');
+  font-size : 3EM;
+}
+
+span{
+  background-color: RGB(107,255, 179);
+  margin: 10px 0px 10px 0px;
+  font-size: 1EM;
+  font-weight: normal;
+  font-family: "WhoIs", monospace;
+}
+
+ul{
+   list-style-type:none;
+}
+
+li{
+  font-family: "WhoIs", monospace;
+  font-size : 1EM;
+}
+
+p {
+  padding-left: 10px;
+  font-family : "WhoIs", monospace;
+  font-size:20px;
+}
+
+div.login > input {
+  display: block;
+  background-color: black;
+  color: white;
+  width: 20%;
+  border : 0px;
+  font-family: "WhoIs", monospace;
+  font-size: 1EM;
+  padding : 5px 15px 5px 15px;
+  margin : 5px 0px 5px 0px;
+}
+
+
+a, button{
+  border: 0px;
+  padding-left: 10px;
+  padding-top: 2px;
+  padding-right: 10px;
+  padding-bottom: 2px;
+  background-color: black;
+  color: white;
+  font-family : "WhoIs", monospace;
+  font-size: 1.25EM;
+  text-decoration : none;
+}
+
+:focus {
+  outline: solid black;
+  color: white;
+}
+.toolbar:hover{
+  outline: solid black;
+  background-color: red;
+  color: white;
+}
+
+.toolbar:active{
+  outline: solid black;
+  background-color: red;
+  color: black;
+}
+
+
+button:hover{
+  outline: solid black;
+  color: white;
+}
+
+a:hover{
+  outline: solid #2f00ff;
+}
+input:hover{
+  outline: solid red;
+}
+
+textarea:hover{
+  outline: solid red;
+}
+
+.ev_removeMe:hover{
+  background-color: #ff0000;
+  color:white;
+  cursor: pointer;
+}
+
+.ev_selectArticle{
+  font-family: "WhoIs", monospace;
+  font-size : 18px;
+}
+
+.ev_selectArticle:hover{
+  color:black;
+  margin-right: 70%;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+
+.ev_logout{
+  float: right;
+  line-height: 20px;
+  background-color: #ff0000;
+  font-size: 14px;
+  border:0;
+  padding:10px;
+  }
+
+.ev_removeMe {
+  text-decoration: none;
+  background-color: #ff0000
+}
+
+form.editArticle {
+  font-family: "WhoIs", monospace;
+  font-size: 1.5EM;
+  width:90%;
+  text-align: left;
+  padding:10px;
+}
+
+form.editArticle > input,textarea{
+  background-color: RGB(52, 0, 255, 15%);
+  border-color: #2f00ff;
+  border-width: 10px;
+  border-style: solid;
+  box-shadow: none;
+  font-family: "WhoIs", monospace;
+  font-size: 18px;
+  line-height:20px;
+  width:85%;
+  color: black;
+  margin: 5px;
+  height: 40px;
+  padding-left:10px;
+}
+
+form.editArticle > textarea{
+  padding : 10px;
+  height: 400px;
+  font-size: 18px;
+  line-height:20px;
+  color:black;
+}
+form.editArticle > textarea.chapo_area {
+    height: 100px;
+}
+
+form.editArticle > label{
+
+}
+
+/*Valider*/
+form.editArticle > button{
+  font-size: 14px;
+  background-color: #2f00ff;
+  color: white;
+  border:0;
+  padding:10px;
+}
+
+.annuler{
+  background-color: #ff0000;
+  font-size: 14px;
+  color: white;
+  border:0;
+  padding:10px;
+}

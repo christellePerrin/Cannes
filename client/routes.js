@@ -18,3 +18,8 @@ Router.route('/depot', function () {
 Router.route('/login', function () {
     this.render('login');
 });
+
+// Configuration de la route des dépots
+Router.route('/restitution', function () {
+    this.render('restitution');
+});

@@ -1,10 +1,13 @@
+
+
+
 <template name="depot">
-  <h1>Dépot</h1>
+  <h2>DEPOT</h2>
   <div class="liste_depots">
-    <p>Liste des dépot de l'utilisateur <b>{{currentUser.username }}</b></p>
+    <p>Liste des articles de <b>{{currentUser.username }} :</b></p>
     <ul>
       {{#each articles}}
-        {{> article}}  
+        {{> article}}
       {{else}}
         <p>Pas encore d'articles... :-(</p>
       {{/each}}
@@ -18,26 +21,39 @@
 
 <template name="editArticle">
   <form class="editArticle">
-    <label>Titre :</label><br/>
+    <label>"{{article.createdAt}}"</label> <br/>
+    <label>*Titre :</label><br/>
     <input type="text" name="titre" value="{{selectedArticle.titre}}" /><br />
-    <label>Chapô :</label><br />
-    <input type="text" name="chapo" value="{{selectedArticle.chapo}}"/><br />
-    <label>Contenu :</label><br />
-    <textarea name="contenu">{{selectedArticle.contenu}}</textarea>
+
+    <label>Sous-titre :</label><br />
+    <input type="text" name="soustitre" value="{{selectedArticle.soustitre}}" /><br />
+
+    <label>*Chapô :</label><br />
+    <textarea class="chapo_area" name="chapo">{{selectedArticle.chapo}}</textarea><br />
+
+    <label>*Contenu :</label><br />
+    <textarea class="contenu_area" name="contenu">{{selectedArticle.contenu}}</textarea>
+
+
     <hr />
-    <button>Valider</button>
     <a href="/" class="annuler">Annuler</a>
+    <button class="valider">Valider</button>
+    <p>Les champs balisés d'un * doivent être remplis</p>
   </form>
 </template>
 
 <template name="article">
   {{#if isOwner}}
-  <li class="ev_selectArticle">{{titre}}<span class="ev_removeMe">[X]</span></li>
+  <li class="ev_selectArticle">{{titre}} <span class="ev_removeMe">[X]</span></li>
   {{else}}
     <li class="">{{titre}}</li>
   {{/if}}
 </template>
 
+<template name="publier">
+  {{#if isAdmin}}
 
+  {{else}}
 
-
+  {{/if}}
+</template>

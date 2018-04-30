@@ -1,23 +1,40 @@
 <head>
-  <title>cannes</title>
+  <title>Maze/Cannes</title>
 </head>
 
 <body>
 </body>
 
+<template name="header">
+  <div class="grid-container">
+  <div class="header_toolbar">
+<h1>header</h1>
+</div>
+  </div>
+</template>
+
 <template name="ApplicationLayout">
   <header>
-    <h1>CANNES</h1>
-    <a href="/">HOME</a>
+
+    <a class="toolbar" href="/">Accueil</a>
+    <a class="toolbar" href="https://maze.fr">Maze Magazine</a>
+    <a class="toolbar" href="/restitution">Festival de Cannes 2018</a>
+    <a class="toolbar" href="/depot">Interface de dépôt</a>
+
+    <h1><a class="toolbar" href="/">Accueil</a></h1>
+    <h1><a class="toolbar" href="https://maze.fr">Maze Magazine</a></h1>
+    <h1><a class="toolbar" href="/restitution">Festival de Cannes 2018</a></h1>
     {{#if currentUser}}
-      <a href="/depot">Dépot</a>
-      <a href="/restitution">Rendu</a>
+    <h1><a class="toolbar" href="/depot">Interface de dépôt</a></h1>
+
       {{> logout }}
     {{else}}
-      <p>Vous devez vous connecter...</p>
+      <p>Pour accéder à l'interface de dépôt, veuillez vous identifier.</p>
       <a href="/login">Se connecter</a>
     {{/if}}
+
   </header>
+
   <article>
     {{> yield}}
   </article>
@@ -26,4 +43,3 @@
     {{> yield "footer"}}
   </footer>
 </template>
-
