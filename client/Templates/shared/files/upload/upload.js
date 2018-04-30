@@ -1,3 +1,5 @@
+uploadedImage = new ReactiveVar(undefined);
+
 Template.uploadForm.onCreated(function () {
   this.currentUpload = new ReactiveVar(false);
 });
@@ -32,6 +34,7 @@ Template.uploadForm.events({
           var image_id = fileObj._id;
 
           $("input[name=image_id]").val(image_id);
+          uploadedImage.set(image_id);
 
         }
         template.currentUpload.set(false);

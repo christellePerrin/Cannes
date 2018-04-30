@@ -1,18 +1,35 @@
 selectedArticle = new ReactiveVar(undefined);
 
+Template.editArticle.onDestroyed(function(){
+  selectedArticle.set(undefined);
+  uploadedImage.set(undefined);
+});
+
 
 Template.editArticle.helpers({
   "selectedArticle" : function(){
     return selectedArticle.get();
   },
   "articleHasImage" : function(image_id){
-    console.log(image_id);
-    if(selectedArticle.get() == null) return null;
+    if(selectedArticle.get() === undefined){
+      // Nouvel article, nouvelle image ??
+      if(uploadedImage.get() != undefined){
+        return true;
+      } else {
+        return false;
+      }
+
+    } else {
+      return selectedArticle.get().image_id == uploadedImage.get();
+    }
     return selectedArticle.get().image_id != null;
   },
 });
 Template.showArticleImage.helpers({
   "showImage" : function(){
+    if(selectedArticle.get() == null){
+      return Images.findOne(uploadedImage.get());
+    }
     return Images.findOne(selectedArticle.get().image_id);
   }
 });
@@ -43,6 +60,7 @@ Template.editArticle.events({
       //nettoyer apres envoi
       form.reset();
       selectedArticle.set(undefined);
+      uploadedImage.set(undefined);
     } else {
       alert("Tous les champs ne sont pas renseignés.");
     }
