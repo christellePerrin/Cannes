@@ -1,0 +1,23 @@
+<template name="showFiles">
+  <div class="view_files">
+  {{#each file in files.each}}
+    {{> viewfile file=file}}
+  {{else}}
+    <p>Pas de fichiers...</p>
+  {{/each}}
+  </div>
+</template>
+
+
+
+<template name='viewfile'>
+  <img src="{{file.link}}" alt="{{file.name}}" />
+  <!-- Same as: -->
+  <!-- <img src="{{fileURL imageFile}}" alt="{{imageFile.name}}" /> -->
+  <hr>
+  <!--
+  <video height="auto" controls="controls">
+    <source src="{{link}}?play=true" type="{{type}}" />
+  </video>
+  -->
+</template>
