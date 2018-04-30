@@ -43,7 +43,8 @@ h2{
 }
 
 span{
-  background-color: RGB(107,255, 179);
+  color : #2f00ff;
+  line-height: 30px;
   margin: 10px 0px 10px 0px;
   font-size: 1EM;
   font-weight: normal;
@@ -79,6 +80,7 @@ div.login > input {
 
 
 a, button{
+  line-height: 1.5EM;
   border: 0px;
   padding-left: 10px;
   padding-top: 2px;
@@ -149,6 +151,7 @@ textarea:hover{
   background-color: #ff0000;
   font-size: 14px;
   border:0;
+  margin: 5px;
   padding:10px;
   }
 
@@ -166,7 +169,7 @@ form.editArticle {
 }
 
 form.editArticle > input,textarea{
-  background-color: RGB(52, 0, 255, 15%);
+  background-color: #f3f8ff;
   border-color: #2f00ff;
   border-width: 10px;
   border-style: solid;
