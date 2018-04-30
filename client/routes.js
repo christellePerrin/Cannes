@@ -1,6 +1,16 @@
 // Configuration du layout général
 Router.configure({
-    layoutTemplate: 'ApplicationLayout'
+  layoutTemplate: 'ApplicationLayout'
+});
+
+Router.onBeforeAction(function() {
+  if (! Meteor.userId()) {
+    this.render('apropos');
+  } else {
+    this.next();
+  }
+},{
+  except : ['login','restitution']
 });
 
 // Configuration de la route racine

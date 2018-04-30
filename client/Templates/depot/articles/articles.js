@@ -35,7 +35,8 @@ Template.editArticle.events({
         Article.insert(article);
       } else {
         // Mise à jour d'un article existant
-        Article.upsert(selectedArticle.get()._id, {$set:article});
+        //Article.upsert(selectedArticle.get()._id, {$set:article});
+        Article.update(selectedArticle.get()._id, {$set:article});
       }
 
       var form = t.find("form.editArticle");

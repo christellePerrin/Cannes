@@ -4,8 +4,14 @@ Template.login.events({
     var userName = t.find("input[name=user]").value;
     var password = t.find("input[name=password]").value;
 
-    Meteor.loginWithPassword(userName, password);
-    Router.go('/depot');
+    Meteor.loginWithPassword(userName, password, function(error){
+      if(error){
+        alert(error.message);
+      } else {
+        Router.go('/depot');
+      }
+    
+    });
   }
 });
 
