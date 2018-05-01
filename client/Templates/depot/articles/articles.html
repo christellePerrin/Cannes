@@ -2,7 +2,7 @@
 
 
 <template name="depotarticles">
-  <h2>DEPOT</h2>
+  <h2>DEPOT D'ARTICLES</h2>
   <div class="liste_depots">
     <p>Liste des articles de <b>{{currentUser.username }} :</b></p>
     <ul>
@@ -14,8 +14,9 @@
     </ul>
   </div>
   <div class="article_add_images">
-    <h1>Ajouter une image</h1>
-    {{> uploadForm }}
+    <h class="addimg">Ajouter une image :</h>
+    <input id="fileInput" class="button" type="file">
+  <!--  {{> uploadForm }} -->
   </div>
   <div class="ajouter_un_depot">
     {{> editArticle }}
@@ -31,10 +32,10 @@
     <input type="hidden" name="image_id" value="{{selectedArticle.image_id}}" />
     <label>Date : {{formatedDate selectedArticle.createdAt}}</label> <br/>
     <label>*Titre :</label><br/>
-    <input type="text" name="titre" value="{{selectedArticle.titre}}" /><br />
+    <input type="text" name="titre" autocomplete="off" value="{{selectedArticle.titre}}" /><br />
 
     <label>Sous-titre :</label><br />
-    <input type="text" name="soustitre" value="{{selectedArticle.soustitre}}" /><br />
+    <input type="text" name="soustitre" autocomplete="off" value="{{selectedArticle.soustitre}}" /><br />
 
     <label>*Chapô :</label><br />
     <textarea class="chapo_area" name="chapo">{{selectedArticle.chapo}}</textarea><br />

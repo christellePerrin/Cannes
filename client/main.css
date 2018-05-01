@@ -1,14 +1,41 @@
 
 @font-face {
-    font-family: 'ocl2';
+    font-family: "ocl2";
     src: url('ocl-2.eot');
     src: url('ocl-2.eot?#iefix') format('embedded-opentype'),
          url('ocl-2.woff2') format('woff2'),
          url('ocl-2.woff') format('woff'),
          url('ocl-2.ttf') format('truetype'),
          url('ocl-2.svg#ocl2') format('svg');
+         font-weight: normal;
+         font-style: normal;
+}
+
+@font-face {
+    font-family: 'ocl1';
+    src: url('ocl-1.eot');
+    src: url('ocl-1.eot?#iefix') format('embedded-opentype'),
+         url('ocl-1.woff2') format('woff2'),
+         url('ocl-1.woff') format('woff'),
+         url('ocl-1.ttf') format('truetype'),
+         url('ocl-1.svg#ocl1') format('svg');
     font-weight: normal;
     font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'ocl3';
+    src: url('ocl-3.eot');
+    src: url('ocl-3.eot?#iefix') format('embedded-opentype'),
+         url('ocl-3.woff2') format('woff2'),
+         url('ocl-3.woff') format('woff'),
+         url('ocl-3.ttf') format('truetype'),
+         url('ocl-3.svg#ocl3') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
 }
 
 h {
@@ -31,18 +58,12 @@ h1 {
   font-family: "Fantasque Sans Mono", monospace;
 }
 
-h2{
-  font-family: 'ocl2',sans-serif;
-  src: url('ocl-2.eot');
-  src: url('ocl-2.eot?#iefix') format('embedded-opentype'),
-       url('ocl-2.woff2') format('woff2'),
-       url('ocl-2.woff') format('woff'),
-       url('ocl-2.ttf') format('truetype'),
-       url('ocl-2.svg#ocl2') format('svg');
+h2 {
+  font-family: "ocl3", sans-serif;
   font-size : 3EM;
 }
 
-span{
+span {
   color : #2f00ff;
   line-height: 30px;
   margin: 10px 0px 10px 0px;
@@ -51,7 +72,7 @@ span{
   font-family: "WhoIs", monospace;
 }
 
-ul{
+ul {
    list-style-type:none;
 }
 
@@ -79,7 +100,7 @@ div.login > input {
 }
 
 
-a, button{
+a, button {
   line-height: 1.5EM;
   border: 0px;
   padding-left: 10px;
@@ -93,6 +114,10 @@ a, button{
   text-decoration : none;
 }
 
+.artimg {
+  margin:2px;
+}
+
 :focus {
   outline: solid black;
   color: white;
@@ -103,7 +128,7 @@ a, button{
   color: white;
 }
 
-a.active{
+a.active {
   outline: solid black;
   background-color: red;
   color: black;
@@ -214,4 +239,51 @@ form.editArticle > button{
   color: white;
   border:0;
   padding:10px;
+}
+
+h.addimg{
+  color: black;
+}
+
+
+input[type="file" i]{
+  background-color: #2f00ff;
+  font-family: WhoIs, monospace;
+  color: white;
+}
+
+.restitution_page{
+  padding: 100px;
+  background-color: #fdd602;
+}
+
+div.medias {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width : 60%;
+  height : auto;
+  border: 10px solid black;
+  background-color: white;
+  margin: 10px;
+  padding: 10px;
+}
+
+div.titre_rest{
+  text-align: center;
+  font-family: "ocl3";
+  font-size: 2EM;
+  padding:10px 10px 0px 10px;
+}
+
+div.soustitrerestitution{
+  text-align: center;
+  font-family: WhoIs;
+  font-size: 2EM;
+  padding:10px;
+}
+
+img.preview{
+  width: 50%;
 }

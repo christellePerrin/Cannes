@@ -1,4 +1,7 @@
 <template name="restitution">
+
+  <div class="restitution_page" style="height:100vh, width:100vw">
+
   {{#each medias}}
     {{> showMedia}}
   {{else}}
@@ -21,6 +24,7 @@ titre
 
 </div>
 -->
+  </div>
 </template>
 
 
@@ -35,9 +39,11 @@ titre
 
 
 <template name="mediaImage">
-    <img class="preview" src="{{link}}" alt="{{name}}" />
+  <img class="preview" src="{{link}}" alt="{{name}}" />
 </template>
+
 <template name="mediaArticle">
-<p>{{titre}}</p>
+  <div class="titre_rest">{{titre}}</div> <br />
+  <div class="soustitrerestitution">{{soustitre}}</div>
 {{> showArticleImage}}
 </template>

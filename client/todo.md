@@ -4,7 +4,7 @@
 
 2 - Mettre en ligne dans le rendu
 
-1 - La typo OCL
+- La typo OCL
 
 - Créer des profils administrateur / utilisateur (permettre de relire et valider en deux temps)
 
@@ -12,8 +12,13 @@
 
 1 - Propulser sur inspira.fr ? ou meteor galaxy ?
 
-1 - Créer les comptes autorisés puis bloquer la création de nouveaux comptes
-
-- Garder en "hover" l'onglet actif
+- Créer les comptes autorisés puis bloquer la création de nouveaux comptes
 
 - Cacher l'interface de connexion et la ligne de texte lorsqu'on est sur le rendu
+
+- Création de l'interface de dépôt d'images pur
+
+- Créer des archives, des "captures d'écran" de l'état du site à horaire/Date fixe
+- Archiver/Vider tous les jours à 8h ?
+
+- Pouvoir se connecter avec la barre espace (submit) 

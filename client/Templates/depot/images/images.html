@@ -1,0 +1,30 @@
+<template name="depotimages">
+
+  <h2>DEPOT D'IMAGES</h2>
+  <div class="liste_depots">
+    <div class="article_add_images">
+      <h class="addimg">Ajouter une image :</h>
+      {{> uploadForm }}
+    </div>
+    <p>Liste des images de <b>{{currentUser.username }} :</b></p>
+    <ul>
+      {{#each images}}
+        {{> showFiles}}
+      {{else}}
+        <p>Pas encore d'images... :-(</p>
+      {{/each}}
+    </ul>
+  </div>
+  <div class="ajouter_une_image">
+    {{> editImage }}
+  </div>
+</template>
+
+<template name="editImage">
+  <a href="/" class="annuler">Annuler</a>
+  <button class="valider">Valider</button>
+</template>
+
+<template name="showImage">
+
+</template>

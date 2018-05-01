@@ -71,7 +71,9 @@ Template.editArticle.events({
 
   },
   "click a.annuler" : function(e,t){
+    if(confirm("Voulez-vous réellement annuler la publication de cet article ?")){
     selectedArticle.set(null);
+    }
   }
 });
 
