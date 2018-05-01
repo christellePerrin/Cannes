@@ -38,6 +38,10 @@
 
 }
 
+body{
+  background-color: #ff0000;
+}
+
 h {
   padding-left: 10px;
   padding-right: 10px;
@@ -162,9 +166,11 @@ textarea:hover{
   font-size : 18px;
 }
 
+.liste_depots{
+  width: 80%;
+}
 .ev_selectArticle:hover{
   color:black;
-  margin-right: 70%;
   text-decoration: underline;
   cursor: pointer;
 }
@@ -270,6 +276,23 @@ div.medias {
   padding: 10px;
 }
 
+.label-file{
+  cursor:pointer;
+  background-color: #2f00ff;
+  padding: 5px;
+  color : white;
+  font-family: WhoIs, monospace;
+  font-size : 1EM;
+}
+
+.label-file:hover{
+color:purple;
+}
+
+.input-file{
+  display: none;
+}
+
 div.titre_rest{
   text-align: center;
   font-family: "ocl3";
@@ -282,6 +305,13 @@ div.soustitrerestitution{
   font-family: WhoIs;
   font-size: 2EM;
   padding:10px;
+}
+
+div.article_add_images {
+  border: 5px solid black;
+  padding : 10px;
+  float: right;
+  color : white;
 }
 
 img.preview{

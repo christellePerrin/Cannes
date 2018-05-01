@@ -2,29 +2,29 @@
 
   <h2>DEPOT D'IMAGES</h2>
   <div class="liste_depots">
-    <div class="article_add_images">
-      <h class="addimg">Ajouter une image :</h>
+    <div class="article_add_photos">
+      <h class="addimg">Ajouter une photo :</h>
       {{> uploadForm }}
     </div>
-    <p>Liste des images de <b>{{currentUser.username }} :</b></p>
+    <p>Liste des photos en ligne :</p>
     <ul>
       {{#each images}}
-        {{> showFiles}}
+        {{> showPhoto}}
       {{else}}
         <p>Pas encore d'images... :-(</p>
       {{/each}}
     </ul>
   </div>
-  <div class="ajouter_une_image">
-    {{> editImage }}
+  <div class="ajouter_une_photo">
+    {{> editPhoto }}
   </div>
 </template>
 
-<template name="editImage">
+<template name="editPhoto">
   <a href="/" class="annuler">Annuler</a>
   <button class="valider">Valider</button>
 </template>
 
-<template name="showImage">
-
+<template name="showPhoto">
+  <img class="preview" src="{{link}}" alt="{{name}}" />
 </template>

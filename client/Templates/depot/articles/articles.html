@@ -15,8 +15,10 @@
   </div>
   <div class="article_add_images">
     <h class="addimg">Ajouter une image :</h>
-    <input id="fileInput" class="button" type="file">
-  <!--  {{> uploadForm }} -->
+    <label for="file" class="label-file">Choisir une image</label>
+    <input id="file" class=label-file type="file">
+<!--    <input id="fileInput" class="label-file" type="file">
+    {{> uploadForm }} -->
   </div>
   <div class="ajouter_un_depot">
     {{> editArticle }}
@@ -30,7 +32,7 @@
       {{> showArticleImage image_id}}
     {{/if}}
     <input type="hidden" name="image_id" value="{{selectedArticle.image_id}}" />
-    <label>Date : {{formatedDate selectedArticle.createdAt}}</label> <br/>
+    <p>Date d'ajout : {{formatedDate selectedArticle.createdAt}}</p> <br/>
     <label>*Titre :</label><br/>
     <input type="text" name="titre" autocomplete="off" value="{{selectedArticle.titre}}" /><br />
 
@@ -43,8 +45,6 @@
     <label>*Contenu :</label><br />
     <textarea class="contenu_area" name="contenu">{{selectedArticle.contenu}}</textarea>
 
-
-    <hr />
     <a href="/" class="annuler">Annuler</a>
     <button class="valider">Valider</button>
     <p>Les champs balisés d'un * doivent être remplis</p>
