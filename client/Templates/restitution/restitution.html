@@ -29,6 +29,7 @@
 <template name="mediaArticle">
   <div class="titre_rest">{{titre}}</div> <br />
   <div class="soustitrerestitution">{{soustitre}}</div>
-  {{> showArticleImage}}
+  <img draggable=false class="preview" src="{{getImageFromId image_id}}" alt="{{name}}" />
+  {{! showArticleImage image_id}}
   <div class="datepub">Publié le {{formatedDate selectedArticle.createdAt}}</div> <br />
 </template>

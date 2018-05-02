@@ -26,7 +26,7 @@ Template.editArticle.helpers({
   },
 });
 Template.showArticleImage.helpers({
-  "showImage" : function(){
+  "showImage" : function(image_id){
     return Images.findOne({_id:uploadedImage.get()});
   }
 });

@@ -32,6 +32,18 @@ Template.showMedia.helpers({
   else return Template["mediaImage"];
  }
 });
+
+
+Template.mediaArticle.helpers({
+  getImageFromId(id){
+    return Images.findOne({_id:id}).link();
+  }
+});
+
+
+
+
+
 var selected = null, // Object of the element to be moved
     x_pos = 0, y_pos = 0, // Stores x & y coordinates of the mouse pointer
     x_elem = 0, y_elem = 0; // Stores top, left values (edge) of the element
