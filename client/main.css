@@ -266,10 +266,6 @@ input[type="file" i]{
 }
 
 div.medias {
-  //display: flex;
-  //flex-direction: column;
-  //justify-content: center;
-  //align-items: center;
   width : 60%;
   height : auto;
   border: 10px solid black;

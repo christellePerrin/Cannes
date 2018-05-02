@@ -1,3 +1,10 @@
 .medias {
   position: absolute;
 }
+
+.notselected {
+  z-index: -1;
+}
+.selected {
+  z-index: 10000;
+}
