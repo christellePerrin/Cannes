@@ -3,7 +3,10 @@ Article = new Mongo.Collection("articles");
 pathMedia = "";
 
 if(Meteor.isServer){
+    console.log("------------------------------------------------------------------");
+    console.log("PATH MEDIA :");
     pathMedia = Meteor.absolutePath + '/medias/';
+    console.log("------------------------------------------------------------------");
 };
 
 
