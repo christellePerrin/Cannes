@@ -16,7 +16,13 @@ Template.restitution.helpers({
 
 Template.showMedia.helpers({
  render(){
+   console.log(this)
   if(this.isArticle) return Template["mediaArticle"];
   else return Template["mediaImage"];
  }
+});
+
+
+Template.registerHelper("debug", function(data){
+  console.log(data);
 });
