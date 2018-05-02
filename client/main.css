@@ -263,6 +263,8 @@ input[type="file" i]{
 .restitution_page{
   padding: 100px;
   background-color: #fdd602;
+  height:100%;
+  width:100%;
 }
 
 div.medias {
