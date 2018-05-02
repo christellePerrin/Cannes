@@ -275,6 +275,9 @@ div.medias {
   cursor:move;
 }
 
+div.medias:hover{
+  background-color: lightgrey;
+}
 .label-file{
   cursor:pointer;
   background-color: #2f00ff;
