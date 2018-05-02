@@ -4,8 +4,8 @@
 
   <div class="restitution_page" style="height:100vh, width:100vw">
 
-  {{#each medias}}
-    {{> showMedia}}
+  {{#each media in medias}}
+    {{> showMedia media=media}}
   {{else}}
     <p>Pas dmédias</p>
   {{/each}}
@@ -33,7 +33,7 @@ titre
 <template name="showMedia">
   <div class="media">
     <div class="medias">
-      {{> render}}
+      {{> render media}}
     </div>
   </div>
 </template>
@@ -41,7 +41,8 @@ titre
 
 
 <template name="mediaImage">
-  <img class="preview" src="{{link}}" alt="{{name}}" />
+  <img class="preview" src="{{fileURL this}}" alt="{{name}}" />
+  <figcaption>{{name}}</figcaption>
 </template>
 
 <template name="mediaArticle">
