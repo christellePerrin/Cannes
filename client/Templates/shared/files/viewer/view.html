@@ -11,7 +11,12 @@
 
 
 <template name='viewfile'>
-  <img src="{{file.link}}" alt="{{file.name}}" />
+  <img src="{{file.link}}" alt="{{file.name}}" /><span class="ev_removeMe">[X]</span>
+  {{#if isInUse file._id}}
+    <p>Image used by an article</p>
+  {{/if}}
+
+
   <!-- Same as: -->
   <!-- <img src="{{fileURL imageFile}}" alt="{{imageFile.name}}" /> -->
   <hr>

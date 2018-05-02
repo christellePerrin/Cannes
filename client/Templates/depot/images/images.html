@@ -8,8 +8,9 @@
     </div>
     <p>Liste des photos en ligne :</p>
     <ul>
-      {{#each images}}
-        {{> showPhoto}}
+      {{#each image in images}}
+      <img class="preview" src="{{image.link}}" alt="{{image.name}}" />
+        {{> showPhoto image=image}}
       {{else}}
         <p>Pas encore d'images... :-(</p>
       {{/each}}
@@ -26,5 +27,6 @@
 </template>
 
 <template name="showPhoto">
-  <img class="preview" src="{{link}}" alt="{{name}}" />
+  <img class="preview" src="{{image.link}}" alt="{{image.name}}" />
+  <hr>
 </template>

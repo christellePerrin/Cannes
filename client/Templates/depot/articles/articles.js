@@ -27,10 +27,7 @@ Template.editArticle.helpers({
 });
 Template.showArticleImage.helpers({
   "showImage" : function(){
-    if(selectedArticle.get() == null){
-      return Images.findOne(uploadedImage.get());
-    }
-    return Images.findOne(selectedArticle.get().image_id);
+    return Images.findOne({_id:uploadedImage.get()});
   }
 });
 
@@ -73,6 +70,7 @@ Template.editArticle.events({
   "click a.annuler" : function(e,t){
     if(confirm("Voulez-vous réellement annuler la publication de cet article ?")){
     selectedArticle.set(null);
+    if(uploadedImage.get()) Images.remove(uploadedImage.get());
     }
   }
 });
@@ -86,6 +84,7 @@ Template.depotarticles.helpers({
 Template.depotarticles.events({
   "click li.ev_selectArticle" : function(e,t){
     selectedArticle.set(this);
+    uploadedImage.set(this.image_id);
   },
   "click li.ev_selectArticle > span.ev_removeMe" : function(e,t){
     if(confirm("Voulez-vous réellement supprimer cet article ?")){
