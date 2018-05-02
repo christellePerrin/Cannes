@@ -3,6 +3,17 @@
     Uploading <b>{{file.name}}</b>:
     <span id="progress">{{progress.get}}%</span>
   {{else}}
+    <label for="fileInput" class="label-file">Choisir une image</label>
+    <input id="fileInput" class=label-file style="display:none;" type="file">
+    <!-- <input id="fileInput" class="label-file" type="file">  -->
+    <!-- <input id="fileInput" type="file" /> -->
+  {{/with}}
+</template>
+<template name="uploadFormold">
+  {{#with currentUpload}}
+    Uploading <b>{{file.name}}</b>:
+    <span id="progress">{{progress.get}}%</span>
+  {{else}}
     <input id="fileInput" type="file" />
   {{/with}}
 </template>
