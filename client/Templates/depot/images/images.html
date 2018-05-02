@@ -11,13 +11,11 @@
     <p>Liste des photos en ligne :</p>
     <ul>
         {{> showFiles}}
-      {{#each images}}
-        {{> showPhoto}}
-
-
-      {{else}}
-        <p>Pas encore d'images... :-(</p>
-      {{/each}}
+        {{#each images}}
+          {{> showPhoto}}
+        {{else}}
+          <p>Pas encore d'images... :-(</p>
+          {{/each}}
     </ul>
   </div>
   <div class="ajouter_une_photo">
@@ -31,5 +29,6 @@
 </template>
 
 <template name="showPhoto">
-  <img class="preview" src="{{link}}" alt="{{name}}" />
+  <img class="preview" src="{{image.link}}" alt="{{image.name}}" />
+  <hr>
 </template>

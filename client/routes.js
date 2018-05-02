@@ -13,6 +13,11 @@ Router.onBeforeAction(function() {
   except : ['login','restitution']
 });
 
+Router.route('/debug', function(){
+  this.render('debug');
+});
+
+
 // Configuration de la route racine
 Router.route('/', function () {
     this.render('apropos');

@@ -1,3 +1,12 @@
+Template.depotimages.helpers({
+  "images" : function(){
+    return Images.find();
+  },
+})
+
+
+
+
 
 Template.editPhoto.helpers({
   "selectedPhoto" : function(){

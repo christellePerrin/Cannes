@@ -16,10 +16,10 @@
   </div>
   <div class="article_add_images">
     <h class="addimg">Ajouter une image :</h>
-    <label for="file" class="label-file">Choisir une image</label>
+    <!-- <label for="file" class="label-file">Choisir une image</label>
     <input id="file" class=label-file type="file">
-<!--    <input id="fileInput" class="label-file" type="file">
-    {{> uploadForm }} -->
+    <input id="fileInput" class="label-file" type="file">  -->
+    {{> uploadForm }}
   </div>
   <div class="ajouter_un_depot">
     {{> editArticle }}
@@ -29,10 +29,10 @@
 
 <template name="editArticle">
   <form class="editArticle">
-    {{#if articleHasImage image_id}}
-      {{> showArticleImage image_id}}
-    {{/if}}
     <input type="hidden" name="image_id" value="{{selectedArticle.image_id}}" />
+    {{!if articleHasImage image_id}}
+    {{> showArticleImage image_id}}
+    {{!if}}
     <p>Date d'ajout : {{formatedDate selectedArticle.createdAt}}</p> <br/>
     <label>*Titre :</label><br/>
     <input type="text" name="titre" autocomplete="off" value="{{selectedArticle.titre}}" /><br />
