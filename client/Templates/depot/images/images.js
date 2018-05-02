@@ -6,7 +6,7 @@ Template.depotimages.helpers({
 
 
 Template.showPhoto.events({
-  "click button.valider" : function(e,t){
+  "submit" : function(e,t){
     e.preventDefault();
     let legend = t.find("input[name=legend]").value.trim();
     let image_id = t.find("input[name=image_id]").value;

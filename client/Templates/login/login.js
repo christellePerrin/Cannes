@@ -1,5 +1,5 @@
 Template.login.events({
-  "click div.login > button" : function(e,t){
+  "submit" : function(e,t){
     e.preventDefault();
     var userName = t.find("input[name=user]").value;
     var password = t.find("input[name=password]").value;

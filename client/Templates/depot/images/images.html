@@ -29,13 +29,12 @@
   {{#if isOwnerWithP image.userId}}
     <span class="ev_removeMe">[X]</span>
   <br />
-  <label for="legend">Légende : </label>
-  <input name="image_id" type="hidden" value="{{image._id}}" />
-  <input name="legend" type="text" value="{{image.meta.legend}}"/>
-  <div class="ajouter_une_photo">
-    <a href="/" class="annuler">Annuler</a>
-    <button class="valider">Valider</button>
-  </div>
+  <form>
+    <label for="legend">Légende : </label>
+    <input name="image_id" type="hidden" value="{{image._id}}" />
+    <input name="legend" type="text" value="{{image.meta.legend}}"/>
+    <button action="submit" class="valider">Valider</button>
+  </form>
   {{else}}
   <figcaption>{{image.meta.legend}}</figcaption>
   {{/if}}
