@@ -13,6 +13,11 @@ Template.showPhoto.events({
     console.log(legend, image_id);
     if(legend){
       Images.update({_id:image_id},{$set:{"meta.legend":legend}});  
+      $(t.find("div#image_" + image_id)).addClass("highlight");
+      Meteor.setTimeout(function(){
+        $(t.find("div#image_" + image_id)).removeClass("highlight");
+      }, 150);
+      
     }
   },
 
