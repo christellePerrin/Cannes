@@ -15,20 +15,20 @@
 
 <template name="showMedia">
     <div class="medias" style="left:{{media.position.x}}px;top:{{media.position.y}}px">
-      {{> render media}}
+       {{> render media}}
     </div>
 </template>
 
 
 
 <template name="mediaImage">
-  <img class="preview" src="{{fileURL this}}" alt="{{name}}" />
-  <figcaption>{{name}}</figcaption>
+    <img draggable=false class="preview" src="{{fileURL this}}" alt="{{name}}" />
+    <figcaption>{{name}}</figcaption>
 </template>
 
 <template name="mediaArticle">
   <div class="titre_rest">{{titre}}</div> <br />
   <div class="soustitrerestitution">{{soustitre}}</div>
-{{> showArticleImage}}
+  {{> showArticleImage}}
   <div class="datepub">Publié le {{formatedDate selectedArticle.createdAt}}</div> <br />
 </template>

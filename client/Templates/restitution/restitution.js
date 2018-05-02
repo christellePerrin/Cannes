@@ -38,27 +38,41 @@ var selected = null, // Object of the element to be moved
 
 Template.showMedia.events({
   "click .medias" : function(e,t){
+    console.log("click");
   },
   "mousedown .medias" : function(e,t){
+    e.preventDefault();
+    e.stopPropagation();
+    //e.stopImmediatePropagation();
+    //console.log("MouseDOWN", e.clientX, e.clientY);
+    // Store the object of the element which needs to be moved
+    selected = e.target;
+
+    if(!$(selected).hasClass("medias")){
+      selected = selected.parentNode; 
+    }
     var elements = $(".medias");
     _.each(elements, function(element){
       $(element).removeClass("selected").addClass("notselected");
     });
-    $(e.target).addClass("selected");
-    //e.preventDefault();
-    //console.log("MouseDOWN", e.clientX, e.clientY);
-    // Store the object of the element which needs to be moved
-    selected = e.target;
+    $(selected).addClass("selected");
+
+
     x_elem = x_pos - selected.offsetLeft;
     y_elem = y_pos - selected.offsetTop;
   },
   "mouseup .medias" : function(e,t){
-    //e.preventDefault();
+    //e.stopImmediatePropagation();
+    e.preventDefault();
+    e.stopPropagation();
     //console.log(e.clientX, e.clientY);
     selected = null;
   },
   'mousemove .medias': function (e) {
-    //console.log(e.clientX, e.clientY);
+    e.preventDefault();
+    e.stopPropagation();
+    ///e.stopImmediatePropagation();
+    //console.log(selected, e.clientX, e.clientY);
     x_pos = document.all ? window.event.clientX : e.pageX;
     y_pos = document.all ? window.event.clientY : e.pageY;
     if (selected !== null) {
