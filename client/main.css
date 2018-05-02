@@ -64,7 +64,8 @@ h1 {
 
 h2 {
   font-family: "ocl3", sans-serif;
-  font-size : 3EM;
+  font-size : 7EM;
+  line-height: 0.5EM;
 }
 
 span {
@@ -295,14 +296,14 @@ color:purple;
 
 div.titre_rest{
   text-align: center;
-  font-family: "ocl3";
+  font-family: "ocl3",sans-serif;
   font-size: 2EM;
   padding:10px 10px 0px 10px;
 }
 
 div.soustitrerestitution{
   text-align: center;
-  font-family: WhoIs;
+  font-family: WhoIs, monospace;
   font-size: 2EM;
   padding:10px;
 }
@@ -313,6 +314,25 @@ div.article_add_images {
   float: right;
   color : white;
 }
+
+div.view_files{
+  display: flex;
+  align-content: flex-start;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 50%;
+}
+
+div.titrephoto{
+  line-height: 1.5EM;
+  font-family: WhoIs, monospace;
+  font-size: 1EM;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+
+}
+
 
 img.preview{
   width: 50%;

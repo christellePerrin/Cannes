@@ -12,9 +12,10 @@
 
 <template name='viewfile'>
   <img src="{{file.link}}" alt="{{file.name}}" />
+  <div class="titrephoto">{{file.name}}</div>
   <!-- Same as: -->
   <!-- <img src="{{fileURL imageFile}}" alt="{{imageFile.name}}" /> -->
-  <hr>
+
   <!--
   <video height="auto" controls="controls">
     <source src="{{link}}?play=true" type="{{type}}" />

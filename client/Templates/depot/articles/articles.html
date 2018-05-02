@@ -3,6 +3,7 @@
 
 <template name="depotarticles">
   <h2>DEPOT D'ARTICLES</h2>
+  <a href="/depot/articles" class="artimg"> Articles </a>  <a href="/depot/images" class="artimg"> Images </a>
   <div class="liste_depots">
     <p>Liste des articles de <b>{{currentUser.username }} :</b></p>
     <ul>
@@ -58,6 +59,9 @@
     <li class="">{{titre}}</li>
   {{/if}}
 </template>
+
+
+
 
 <template name="publier">
   {{#if isAdmin}}
