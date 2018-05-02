@@ -34,8 +34,12 @@ Template.uploadForm.events({
           //alert('File "' + fileObj.name + '" successfully uploaded');
           var image_id = fileObj._id;
 
-          $("input[name=image_id]").val(image_id);
-          uploadedImage.set(image_id);
+          let route = Router.current().route.path();
+          console.log(route);
+          if(route.includes("articles")){
+            $("input[name=image_id]").val(image_id);
+            uploadedImage.set(image_id);
+          }
 
         }
         template.currentUpload.set(false);

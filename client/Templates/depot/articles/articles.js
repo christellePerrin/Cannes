@@ -99,3 +99,8 @@ Template.registerHelper("isOwner", function(){
     return Meteor.userId() == this.owner;
   }
 );
+Template.registerHelper("isOwnerWithP", function(o){
+  console.log(Meteor.userId(), o);
+    return Meteor.userId() == o;
+  }
+);

@@ -14,5 +14,10 @@ Template.showPhoto.events({
     if(legend){
       Images.update({_id:image_id},{$set:{"meta.legend":legend}});  
     }
+  },
+
+  "click span.ev_removeMe" : function(e,t){
+    console.log(this);
+    if(confirm("R U SUR ?")) Images.remove({_id:this.image._id});
   }
 });
