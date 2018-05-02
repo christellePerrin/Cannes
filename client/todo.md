@@ -1,8 +1,4 @@
-1°  Souci avec les images = dans le rendu la premiere que je charge s'affiche sur tous les articles, meme ceux n'ayant pas d'image -  mais ca reste bon dans le DEBUG
 
-2° plus d'aperçu des images dans le dépôt article
-
-3° un peu le même souci avec le dépot d'image
 
 - mettre le fond jaune en plein écran
 

@@ -4,10 +4,6 @@ Template.depotimages.helpers({
   },
 })
 
-
-
-
-
 Template.editPhoto.helpers({
   "selectedPhoto" : function(){
     return selectedPhoto.get();

@@ -1,24 +1,24 @@
 
 @font-face {
     font-family: "ocl2";
-    src: url('ocl-2.eot');
-    src: url('ocl-2.eot?#iefix') format('embedded-opentype'),
-         url('ocl-2.woff2') format('woff2'),
-         url('ocl-2.woff') format('woff'),
-         url('ocl-2.ttf') format('truetype'),
-         url('ocl-2.svg#ocl2') format('svg');
+    src: url('/fonts/ocl/ocl2/ocl-2.eot');
+    src: url('/fonts/ocl/ocl2/ocl-2.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/ocl/ocl2/ocl-2.woff2') format('woff2'),
+         url('/fonts/ocl/ocl2/ocl-2.woff') format('woff'),
+         url('/fonts/ocl/ocl2/ocl-2.ttf') format('truetype'),
+         url('/fonts/ocl/ocl2/ocl-2.svg#ocl2') format('svg');
          font-weight: normal;
          font-style: normal;
 }
 
 @font-face {
     font-family: 'ocl1';
-    src: url('ocl-1.eot');
-    src: url('ocl-1.eot?#iefix') format('embedded-opentype'),
-         url('ocl-1.woff2') format('woff2'),
-         url('ocl-1.woff') format('woff'),
-         url('ocl-1.ttf') format('truetype'),
-         url('ocl-1.svg#ocl1') format('svg');
+    src: url('/fonts/ocl/ocl1/ocl-1.eot');
+    src: url('/fonts/ocl/ocl1/ocl-1.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/ocl/ocl1/ocl-1.woff2') format('woff2'),
+         url('/fonts/ocl/ocl1/ocl-1.woff') format('woff'),
+         url('/fonts/ocl/ocl1/ocl-1.ttf') format('truetype'),
+         url('/fonts/ocl/ocl1/ocl-1.svg#ocl1') format('svg');
     font-weight: normal;
     font-style: normal;
 
@@ -27,12 +27,12 @@
 
 @font-face {
     font-family: 'ocl3';
-    src: url('ocl-3.eot');
-    src: url('ocl-3.eot?#iefix') format('embedded-opentype'),
-         url('ocl-3.woff2') format('woff2'),
-         url('ocl-3.woff') format('woff'),
-         url('ocl-3.ttf') format('truetype'),
-         url('ocl-3.svg#ocl3') format('svg');
+    src: url('/fonts/ocl/ocl3/ocl-3.eot');
+    src: url('/fonts/ocl/ocl3/ocl-3.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/ocl/ocl3/ocl-3.woff2') format('woff2'),
+         url('/fonts/ocl/ocl3/ocl-3.woff') format('woff'),
+         url('/fonts/ocl/ocl3/ocl-3.ttf') format('truetype'),
+         url('/fonts/ocl/ocl3/ocl-3.svg#ocl3') format('svg');
     font-weight: normal;
     font-style: normal;
 
