@@ -48,7 +48,7 @@ h {
   margin: 10px 0px 10px 0px;
   font-size: 1EM;
   font-weight: normal;
-  font-family: "Fantasque Sans Mono", monospace;
+  font-family: "WhoIs", monospace;
 }
 
 h1 {
@@ -59,13 +59,14 @@ h1 {
   font-size: 1EM;
   font-weight: normal;
   background-color: #2f00ff; /*bleu(17,0,255); vert d'eau clair#e1ffff;*/
-  font-family: "Fantasque Sans Mono", monospace;
+  font-family: "WhoIs", monospace;
 }
 
 h2 {
   font-family: "ocl3", sans-serif;
   font-size : 7EM;
   line-height: 0.5EM;
+  font-weight: normal;
 }
 
 span {
