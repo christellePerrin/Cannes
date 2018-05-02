@@ -1,6 +1,7 @@
 Template.showFiles.helpers({
   "files" : function(){
-    return Images.find();
+    //return Images.find({},{$sort : {createdAt: -1}});
+    return Images.find({});
   },
 })
 

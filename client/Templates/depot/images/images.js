@@ -1,44 +1,18 @@
 Template.depotimages.helpers({
   "images" : function(){
-    return Images.find();
+    return Images.find({},{sort:{"meta.createdAt":-1}});
   },
 })
 
-Template.editPhoto.helpers({
-  "selectedPhoto" : function(){
-    return selectedPhoto.get();
-  },
-  "photohasbeenuploaded" : function(photo_id){
-    if(selectedPhoto.get() === undefined){
-      if(uploadedPhoto.get() != undefined){
-        return true;
-      } else {
-        return false;
-      }
 
-    } else {
-      return selectedPhoto.get().photo_id == uploadedPhoto.get();
-    }
-    return selectedPhoto.get().photo_id != null;
-  },
-});
-
-Template.showPhoto.helpers({
-  "showPhoto" : function(){
-    if(selectedPhoto.get() == null){
-      return Photos.findOne(uploadedPhotos.get());
-    }
-    return Photos.findOne(selectedPhotos.get().image_id);
-  }
-});
-
-Template.editPhoto.events({
-  "submit Photo" : function(e,t){
+Template.showPhoto.events({
+  "click button.valider" : function(e,t){
     e.preventDefault();
-  if(selectedPhoto.get() === undefined){
-    photo_id = Photo.insert(photo);
-  } else {
-    photo_id = Photo.update(selectedPhoto.get()._id, {$set:photo});
+    let legend = t.find("input[name=legend]").value.trim();
+    let image_id = t.find("input[name=image_id]").value;
+    console.log(legend, image_id);
+    if(legend){
+      Images.update({_id:image_id},{$set:{"meta.legend":legend}});  
+    }
   }
-},
 });
