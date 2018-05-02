@@ -275,6 +275,7 @@ div.medias {
   background-color: white;
   margin: 10px;
   padding: 10px;
+  cursor:move;
 }
 
 .label-file{
@@ -297,7 +298,7 @@ color:purple;
 div.titre_rest{
   text-align: center;
   font-family: "ocl3",sans-serif;
-  font-size: 2EM;
+  font-size: 3EM;
   padding:10px 10px 0px 10px;
 }
 
@@ -333,6 +334,11 @@ div.titrephoto{
 
 }
 
+div.datepub{
+  font-family: WhoIs, monospace;
+  font-size: 1EM;
+padding-top: 10px;
+}
 
 img.preview{
   width: 50%;

@@ -5,8 +5,16 @@
 3° un peu le même souci avec le dépot d'image
 
 - mettre le fond jaune en plein écran
+
 //////////////
 
+- créer la classe dragme
+
+- rendre les fenetres du rendu flottantes et positionnées aléatoirement dans un "cadre"
+
++ onclick : fonction remplaçant le sous-titre par le chapo puis en deuxieme onclick, remplaçant le chapo par le contenu (le titre reste)
+
+/////////////
 
 - La typo OCL
 
@@ -14,11 +22,11 @@
 
 - Instaurer une limite de caractères
 
-1 - Propulser sur inspira.fr ? ou meteor galaxy ?
+1 - Propulser sur inspira.fr ? utiliser meteor galaxy ? $$$
 
-- Créer les comptes autorisés puis bloquer la création de nouveaux comptes
+- Sécurité : Créer les comptes autorisés puis bloquer la création de nouveaux comptes
 
-- Cacher l'interface de connexion et la ligne de texte lorsqu'on est sur le
+- Cacher l'interface de connexion et la ligne de texte lorsqu'on est sur le rendu
 
 - Suppr le bouton "ajouter une image" en double
 
@@ -27,7 +35,7 @@
 
 - Pouvoir se connecter avec la barre espace (submit)
 
-- Remettre Article | Photos dans chaque sous-dépot
+- changer les accents en non-accents pour le H2
 
 <?PHP
 function enleveaccents($param)
