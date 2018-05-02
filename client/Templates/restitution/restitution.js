@@ -36,7 +36,10 @@ Template.showMedia.helpers({
 
 Template.mediaArticle.helpers({
   getImageFromId(id){
-    return Images.findOne({_id:id}).link();
+    console.log(id);
+    if(id){
+      return Images.findOne({_id:id}).link();
+    }
   }
 });
 
