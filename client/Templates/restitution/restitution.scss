@@ -9,6 +9,9 @@
     margin: 10px;
     padding: 5%;
     cursor:move;
+    .close {
+      display: block;
+    }
 }
 
 .fullscreen_all{
@@ -22,6 +25,11 @@
     margin: 10px;
     padding: 5%;
     cursor:move;
+
+    .close {
+      display: block;
+    }
+
 }
 
 .medias {
@@ -34,6 +42,10 @@
   padding: 10px;
   cursor:move;
   box-shadow: -10px 10px;
+
+  .close {
+    display:none;
+  }
 }
 
 .medias:hover{
@@ -82,7 +94,7 @@
 .preview_rest{
   background: none;
   width: 90%;
-  
+
   }
 
 .preview_hidden{

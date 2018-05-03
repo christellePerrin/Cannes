@@ -69,8 +69,25 @@ function doubleClick(){
 }
 var clickCount = 0;
 
-
 Template.showMedia.events({
+  'click .close': function(e,t) {
+    console.log("Close");
+    e.preventDefault();
+    e.stopPropagation();
+    element = e.target;
+
+    while(!$(element).hasClass("fullscreen_all") && !$(element).hasClass("fullscreen")){
+      element = element.parentNode;
+    }
+    $(element).removeClass("fullscreen_all").removeClass("fullscreen").addClass("medias");
+    contenu = $(t.find(".contenu_rest"));
+    contenu.removeClass("contenu_rest").addClass("contenu_hidden");
+    img = $(t.find(".preview_hidden"));
+    img.removeClass("preview_hidden").addClass("preview_rest");
+  },
+
+
+
   "click .medias" : function(e,t){
     console.log("click");
   },
@@ -79,7 +96,7 @@ Template.showMedia.events({
     e.stopPropagation();
     element = e.target;
 
-    if(!$(element).hasClass("medias")){
+    while(!$(element).hasClass("medias")){
       element = element.parentNode;
     }
     console.log("doubleClick");
@@ -95,7 +112,7 @@ Template.showMedia.events({
     e.stopPropagation();
     element = e.target;
 
-    if(!$(element).hasClass("fullscreen")){
+    while(!$(element).hasClass("fullscreen")){
       element = element.parentNode;
     }
     $(element).removeClass("fullscreen").addClass("fullscreen_all");
@@ -113,7 +130,7 @@ Template.showMedia.events({
     e.stopPropagation();
     element = e.target;
 
-    if(!$(element).hasClass("fullscreen_all")){
+    while(!$(element).hasClass("fullscreen_all")){
       element = element.parentNode;
     }
     $(element).removeClass("fullscreen_all").addClass("medias");
