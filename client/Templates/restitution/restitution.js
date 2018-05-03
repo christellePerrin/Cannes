@@ -29,6 +29,20 @@ Template.showMedia.helpers({
   render(){
     if(this.isArticle) return Template["mediaArticle"];
     else return Template["mediaImage"];
+  },
+  auteur(){
+    let userId = null;
+    if(this.media.isArticle){
+      userId = this.media.owner;
+    }else{
+      userId = this.media.userId;
+    }
+    let auteur = Meteor.users.findOne({_id:userId});
+    if (auteur) {
+      return auteur.username;
+    }else{
+      return "anonyme";
+    }
   }
 });
 
@@ -38,7 +52,7 @@ Template.mediaArticle.helpers({
     if(id){
       return Images.findOne({_id:id}).link();
     }
-  }
+  },
 });
 
 var selected = null, // Object of the element to be moved
