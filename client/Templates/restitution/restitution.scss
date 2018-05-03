@@ -1,28 +1,28 @@
 .fullscreen{
     position: absolute;
     background-color: chartreuse;
-    width : 70%;
+    width : 80%;
     transition: 0.5s;
     top:100px !important;
     left:0 !important;
-    border: 10px solid black;
+    border: 10px solid #2f00ff;
     background-color: white;
     margin: 10px;
-    padding: 50px;
+    padding: 5%;
     cursor:move;
 }
 
 .fullscreen_all{
     position: absolute;
     background-color: chartreuse;
-    width : 70%;
+    width : 80%;
     transition: 0.5s;
     top:100px !important;
     left:0 !important;
-    border: 10px solid black;
+    border: 10px solid #2f00ff;
     background-color: white;
     margin: 10px;
-    padding: 50px;
+    padding: 5%;
     cursor:move;
 }
 
@@ -30,7 +30,7 @@ div.medias {
   position: absolute;
   width : 25%;
   height : auto;
-  border: 10px solid black;
+  border: 10px solid #2f00ff;
   background-color: white;
   margin: 10px;
   padding: 10px;
@@ -84,5 +84,14 @@ div.medias:hover{
   background: none;
   width: 100%;
   align-content: center;
-
   }
+
+.preview_hidden{
+  display : none;
+}
+.auteur {
+  font-family: WhoIs, monospace;
+  text-decoration: underline;
+  text-align: center;
+  font-size : 1EM;
+}

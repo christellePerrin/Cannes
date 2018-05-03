@@ -26,7 +26,7 @@
 
 <template name="showPhoto">
 <div id="image_{{image._id}}" class="">
-  <img class="preview" src="{{fileURL image}}" alt="{{image.name}}" />
+  <img class="thumbnail" src="{{fileURL image}}" alt="{{image.name}}" />
   {{#if isOwnerWithP image.userId}}
     <span class="ev_removeMe">[X]</span>
   <br />

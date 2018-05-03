@@ -43,6 +43,7 @@
     <textarea class="chapo_area" name="chapo">{{selectedArticle.chapo}}</textarea><br />
 
     <label>*Contenu :</label><br />
+
     <textarea class="contenu_area" name="contenu">{{selectedArticle.contenu}}</textarea>
 
     <a href="/" class="annuler">Annuler</a>
@@ -74,6 +75,6 @@
 
 <template name="showArticleImage">
   {{#with showImage}}
-    <img class="preview" src="{{link}}" alt="{{name}}" />
+    <img class="thumbnail" src="{{link}}" alt="{{name}}" />
   {{/with}}
 </template>

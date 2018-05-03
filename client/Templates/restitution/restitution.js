@@ -105,6 +105,8 @@ Template.showMedia.events({
     chapo.removeClass("chapo_rest").addClass("chapo_hidden");
     contenu = $(t.find(".contenu_hidden"));
     contenu.removeClass("contenu_hidden").addClass("contenu_rest");
+    img = $(t.find(".preview_rest"));
+    img.removeClass("preview_rest").addClass("preview_hidden");
   },
 
 
@@ -122,6 +124,8 @@ Template.showMedia.events({
 
     contenu = $(t.find(".contenu_rest"));
     contenu.removeClass("contenu_rest").addClass("contenu_hidden");
+    img = $(t.find(".preview_hidden"));
+    img.removeClass("preview_hidden").addClass("preview_rest");
   },
 
 

@@ -127,7 +127,7 @@ a, button {
   padding-top: 2px;
   padding-right: 10px;
   padding-bottom: 2px;
-  background-color: black;
+  background-color: #2f00ff;
   color: white;
   font-family : "WhoIs", monospace;
   font-size: 1.25EM;
@@ -142,16 +142,21 @@ a, button {
   outline: solid black;
   color: white;
 }
+
+.toolbar{
+background-color: solid #2f00ff;
+}
+
 .toolbar:hover{
-  outline: solid black;
+  outline: solid #2f00ff;
   background-color: red;
   color: white;
 }
 
 a.active {
-  outline: solid black;
+  outline: solid #2f00ff;
   background-color: red;
-  color: black;
+  color: white;
 }
 
 
@@ -263,7 +268,9 @@ h.addimg{
   color: black;
 }
 
-
+.thumbnail{
+  width : 30%;
+}
 input[type="file" i]{
   background-color: #2f00ff;
   font-family: WhoIs, monospace;

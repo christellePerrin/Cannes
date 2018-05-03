@@ -11,8 +11,9 @@
 
 <template name="showMedia">
     <div class="medias" style="left:{{media.position.x}}px;top:{{media.position.y}}px">
-       {{> render media}}
-         <div class="auteur">Auteur : {{auteur}}</div> <br />
+
+         <div class="auteur">Par {{auteur}}</div> <br />
+ {{> render media}}
     </div>
 </template>
 
@@ -28,6 +29,6 @@
   <div class="titre_rest">{{titre}}</div> <br />
   <div class="soustitrerestitution">{{soustitre}}</div>
   <div class="chapo_hidden">{{chapo}}</div>
-  <div class="contenu_hidden">{{contenu}}</div>
+  <div class="contenu_hidden">{{#markdown}}{{contenu}}{{/markdown}}</div>
   <div class="datepub">Publié le {{formatedDate createdAt}}</div> <br />
 </template>
