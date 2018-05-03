@@ -79,7 +79,7 @@ Template.showMedia.events({
     e.stopPropagation();
     element = e.target;
 
-    if(!$(element).hasClass("medias")){
+    while(!$(element).hasClass("medias")){
       element = element.parentNode;
     }
     console.log("doubleClick");
@@ -95,7 +95,7 @@ Template.showMedia.events({
     e.stopPropagation();
     element = e.target;
 
-    if(!$(element).hasClass("fullscreen")){
+    while(!$(element).hasClass("fullscreen")){
       element = element.parentNode;
     }
     $(element).removeClass("fullscreen").addClass("fullscreen_all");
@@ -113,7 +113,7 @@ Template.showMedia.events({
     e.stopPropagation();
     element = e.target;
 
-    if(!$(element).hasClass("fullscreen_all")){
+    while(!$(element).hasClass("fullscreen_all")){
       element = element.parentNode;
     }
     $(element).removeClass("fullscreen_all").addClass("medias");
