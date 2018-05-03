@@ -36,7 +36,7 @@ Template.editArticle.events({
     e.preventDefault();
     var article = {titre:"", isArticle: true, soustitre:"", chapo:"", contenu:"", createdAt : + new Date(), owner: Meteor.userId()};
     article.image_id = t.find("input[name=image_id]").value;
-    article.titre = t.find("input[name=titre]").value.trim().replace(/à/g,"a").replace(/é|è|ê/g,"e");
+    article.titre = t.find("input[name=titre]").value.trim().replace(/à|ä|â/g,"a").replace(/é|è|ê|ë/g,"e").replace(/ö|ô/g,"o").replace(/ù|ü/g,"u").replace(/î|ï/g,"i");
     article.soustitre = t.find("input[name=soustitre]").value.trim();
     article.chapo = t.find("textarea[name=chapo]").value.trim();
     article.contenu = t.find("textarea[name=contenu]").value.trim();

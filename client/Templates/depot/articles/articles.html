@@ -6,7 +6,7 @@
   <h2>DEPOT D'ARTICLES</h2>
  <a href="/depot/images" class="artimg"> > Images </a>
   <div class="liste_depots">
-    <p>Liste des articles en ligne : </p>
+    <div class="texte">Liste des articles en ligne : </div>
     <ul>
       {{#each articles}}
         {{> article}}
@@ -34,7 +34,7 @@
     {{!if}}
 
 
-    <p>Date d'ajout de l'article : {{formatedDate selectedArticle.createdAt}}</p>
+    <div class="texte">Date d'ajout de l'article : {{formatedDate selectedArticle.createdAt}}</div>
 
 
     <label>*Titre :</label><br/>
@@ -52,7 +52,7 @@
 <br>
 
 <div class="preceptes">
-<p>Guide rapide de formattage en Markdown :</p>
+<div class="texte">Guide rapide de formattage :</div>
 <span class="guide">**Texte** affiche le texte en <strong>gras.</strong></span><br />
 <span class="guide">_Texte_ affiche le texte en <em>italique.</em></span><br />
 <span class="guide">__Texte__ souligne </span><span class="guide_souligner">le texte.</span>
@@ -60,7 +60,7 @@
 <br>
     <a href="/" class="annuler">Annuler</a>
     <button class="valider">Valider</button>
-    <p>Les champs balisés d'un * doivent être remplis</p>
+    <div class="texte">Les champs balisés d'un * doivent être remplis</div>
   </form>
 </template>
 

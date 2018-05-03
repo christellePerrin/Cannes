@@ -1,4 +1,5 @@
 .fullscreen{
+  display: inline-block;
     position: absolute;
     width : 80%;
     transition: 0.5s;
@@ -8,9 +9,9 @@
     background-color: white;
     margin: 10px;
     padding: 5%;
-    cursor:move;
+    cursor: zoom-in;
     .close {
-      display: block;
+    display: block;
     }
 }
 
@@ -24,7 +25,7 @@
     background-color: white;
     margin: 10px;
     padding: 5%;
-    cursor:move;
+    cursor:normal;
 
     .close {
       display: block;
@@ -80,15 +81,17 @@
   display: block;
   padding: 10px;
   font-family: "WhoIs", monospace;
-  font-size : 1.5EM;
+  font-size : 1.1EM;
   line-height: 1.25EM;
 }
 
 .contenu_rest{
   display: block;
   padding:10px;
-  font-family: "WhoIs", monospace;
-  font-size : 1.25EM;
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 200;
+  font-size: 1EM;
+  line-height: 1.5EM;
 }
 
 .preview_rest{
@@ -101,8 +104,17 @@
   display : none;
 }
 .auteur {
-  font-family: WhoIs, monospace;
+  font-family: "WhoIs", monospace;
   text-decoration: underline;
   text-align: center;
   font-size : 1EM;
+}
+
+.close{
+  float: right;
+  font-family: "WhoIs", sans-serif;
+  font-size: 2.5EM;
+  color: red;
+  font-weight:lighter;
+  cursor: pointer;
 }
