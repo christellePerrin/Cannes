@@ -8,7 +8,5 @@ Template.ApplicationLayout.events({
     if(e.target.innerHTML.includes("Festival")){
       console.log("Hello");
     }
-
-
   }
 });

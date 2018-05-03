@@ -38,9 +38,23 @@
 
 }
 
-body{
-  background-color: #ff0000;
+@font-face {
+  font-family: 'WhoIs';
+  src: url('/fonts/whois/whois-mono.ttf') format('truetype');
 }
+
+body{
+background-color: red;
+}
+
+body#restitution{
+  background-color: blue;
+}
+.restitution-page{
+  background-color: blue;
+}
+
+
 
 h {
   padding-left: 10px;
@@ -65,7 +79,7 @@ h1 {
 h2 {
   font-family: "ocl3", sans-serif;
   font-size : 7EM;
-  line-height: 0.5EM;
+  line-height: 1EM;
   font-weight: normal;
 }
 
@@ -228,10 +242,6 @@ form.editArticle > textarea.chapo_area {
     height: 100px;
 }
 
-form.editArticle > label{
-
-}
-
 /*Valider*/
 form.editArticle > button{
   font-size: 14px;
@@ -259,14 +269,6 @@ input[type="file" i]{
   font-family: WhoIs, monospace;
   color: white;
 }
-
-.restitution_page{
-  padding: 100px;
-  background-color: #fdd602;
-  height:100%;
-  width:100%;
-}
-
 
 .label-file:hover{
 color:purple;
@@ -312,8 +314,8 @@ div.titrephoto{
   display: flex;
   flex-direction: column-reverse;
   align-items: center;
-
 }
+
 
 div.datepub{
   font-family: WhoIs, monospace;
@@ -322,5 +324,8 @@ padding-top: 10px;
 }
 
 img.preview{
-  width: 50%;
+  display: flex;
+  background: none;
+  width: 100%;
+  align-content: center;
 }

@@ -2,6 +2,7 @@
 
 
 <template name="depotarticles">
+
   <h2>DEPOT D'ARTICLES</h2>
  <a href="/depot/images" class="artimg"> > Images </a>
   <div class="liste_depots">
@@ -21,6 +22,7 @@
   <div class="ajouter_un_depot">
     {{> editArticle }}
   </div>
+
 </template>
 
 
@@ -48,6 +50,7 @@
     <p>Les champs balisés d'un * doivent être remplis</p>
   </form>
 </template>
+
 
 <template name="article">
   {{#if isOwner}}

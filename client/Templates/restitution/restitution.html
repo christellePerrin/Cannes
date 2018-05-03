@@ -1,17 +1,13 @@
 
-
 <template name="restitution">
-
-  <div class="restitution_page">
-
+  <div class="restitution-page">
   {{#each media in medias}}
     {{> showMedia media=media}}
   {{else}}
-    <p>Pas dmédias</p>
+    <p>Point dmédias</p>
   {{/each}}
-  </div>
+</div>
 </template>
-
 
 <template name="showMedia">
     <div class="medias" style="left:{{media.position.x}}px;top:{{media.position.y}}px">
@@ -20,16 +16,17 @@
 </template>
 
 
-
 <template name="mediaImage">
     <img draggable=false class="preview" src="{{fileURL this}}" alt="{{name}}" />
-    <figcaption>{{name}}</figcaption>
+      <figcaption class="legendeimg">{{meta.legend}}</figcaption>
 </template>
 
 <template name="mediaArticle">
+  <img draggable=false class="preview_rest" src="{{getImageFromId image_id}}" alt="{{name}}" />
+  {{! showArticleImage image_id}}
   <div class="titre_rest">{{titre}}</div> <br />
   <div class="soustitrerestitution">{{soustitre}}</div>
-  <img draggable=false class="preview" src="{{getImageFromId image_id}}" alt="{{name}}" />
-  {{! showArticleImage image_id}}
-  <div class="datepub">Publié le {{formatedDate selectedArticle.createdAt}}</div> <br />
+  <div class="chapo_hidden">{{chapo}}</div>
+  <div class="contenu_hidden">{{contenu}}</div>
+  <div class="datepub">Publié le {{formatedDate createdAt}}</div> <br />
 </template>

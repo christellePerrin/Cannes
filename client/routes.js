@@ -47,3 +47,8 @@ Router.route('/login', function () {
 Router.route('/restitution', function () {
     this.render('restitution');
 });
+
+// Configuration de la route des dépots
+Router.route('/restitution/Jour1', function () {
+    this.render('restitution/Jour1');
+});

@@ -1,10 +1,10 @@
 <template name="depotimages">
-
+<div class="red_page">
   <h2>DEPOT D'IMAGES</h2>
   <a href="/depot/articles" class="artimg"> > Articles </a>
 
   <div class="liste_depots">
-    <div class="article_add_photos">
+    <div class="article_add_images">
       <h class="addimg">Ajouter une photo :</h>
       {{> uploadForm }}
     </div>
@@ -18,6 +18,7 @@
           {{/each}}
     </ul>
   </div>
+</div>
 </template>
 
 <template name="editPhoto">
@@ -30,13 +31,13 @@
     <span class="ev_removeMe">[X]</span>
   <br />
   <form>
-    <label for="legend">Légende : </label>
+    <label for="legend">Légende & crédits : </label>
     <input name="image_id" type="hidden" value="{{image._id}}" />
     <input name="legend" type="text" value="{{image.meta.legend}}"/>
     <button action="submit" class="valider">Valider</button>
   </form>
   {{else}}
-  <figcaption>{{image.meta.legend}}</figcaption>
+  <figcaption class="legendeimg">{{image.meta.legend}}</figcaption>
   {{/if}}
 </div>
 </template>
