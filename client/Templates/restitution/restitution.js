@@ -98,8 +98,6 @@ Template.showMedia.events({
     if(!$(element).hasClass("fullscreen")){
       element = element.parentNode;
     }
-    console.log("doubleClick");
-    console.log(element);
     $(element).removeClass("fullscreen").addClass("fullscreen_all");
     chapo = $(t.find(".chapo_rest"));
     chapo.removeClass("chapo_rest").addClass("chapo_hidden");
@@ -118,10 +116,7 @@ Template.showMedia.events({
     if(!$(element).hasClass("fullscreen_all")){
       element = element.parentNode;
     }
-    console.log("doubleClick");
-    console.log(element);
     $(element).removeClass("fullscreen_all").addClass("medias");
-
     contenu = $(t.find(".contenu_rest"));
     contenu.removeClass("contenu_rest").addClass("contenu_hidden");
     img = $(t.find(".preview_hidden"));

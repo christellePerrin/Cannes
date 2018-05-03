@@ -1,6 +1,5 @@
 .fullscreen{
     position: absolute;
-    background-color: chartreuse;
     width : 80%;
     transition: 0.5s;
     top:100px !important;
@@ -14,7 +13,6 @@
 
 .fullscreen_all{
     position: absolute;
-    background-color: chartreuse;
     width : 80%;
     transition: 0.5s;
     top:100px !important;
@@ -26,7 +24,7 @@
     cursor:move;
 }
 
-div.medias {
+.medias {
   position: absolute;
   width : 25%;
   height : auto;
@@ -35,12 +33,14 @@ div.medias {
   margin: 10px;
   padding: 10px;
   cursor:move;
-
+  box-shadow: -10px 10px;
 }
 
-div.medias:hover{
-  background-color: lightgrey;
+.medias:hover{
+  background-color: RGB(233,233,233);
+  width : 26%;
 }
+
 .label-file{
   cursor:pointer;
   background-color: #2f00ff;
@@ -80,10 +80,9 @@ div.medias:hover{
 }
 
 .preview_rest{
-  display: flex;
   background: none;
-  width: 100%;
-  align-content: center;
+  width: 90%;
+  
   }
 
 .preview_hidden{

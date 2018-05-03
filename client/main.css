@@ -83,6 +83,29 @@ h2 {
   font-weight: normal;
 }
 
+div.preceptes{
+  margin-right : 50%;
+  margin-left: 5px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  border: 2.5px solid #2f00ff;
+  border-style: dashed;
+}
+
+.guide{
+  font-family: "WhoIs", monospace;
+  font-size: 0.75EM;
+  line-height: 1EM;
+  color: black;
+}
+.guide_souligner{
+  font-family: "WhoIs", monospace;
+  font-size: 0.75EM;
+  line-height: 1EM;
+  text-decoration: underline;
+  color: black;
+}
+
 span {
   color : #2f00ff;
   line-height: 30px;
@@ -143,14 +166,15 @@ a, button {
   color: white;
 }
 
-.toolbar{
-background-color: solid #2f00ff;
+a:hover{
+  outline: solid white;
 }
 
-.toolbar:hover{
-  outline: solid #2f00ff;
+.toolbar: hover{
+  outline: solid white;
   background-color: red;
   color: white;
+  border-color: solid white;
 }
 
 a.active {
@@ -160,14 +184,12 @@ a.active {
 }
 
 
-button:hover{
+button: hover{
   outline: solid black;
   color: white;
 }
 
-a:hover{
-  outline: solid #2f00ff;
-}
+
 input:hover{
   outline: solid red;
 }
@@ -190,7 +212,7 @@ textarea:hover{
 .liste_depots{
   width: 80%;
 }
-.ev_selectArticle:hover{
+.ev_selectArticle : hover {
   color:black;
   text-decoration: underline;
   cursor: pointer;
@@ -277,10 +299,6 @@ input[type="file" i]{
   color: white;
 }
 
-.label-file:hover{
-color:purple;
-}
-
 .input-file{
   display: none;
 }
@@ -300,7 +318,8 @@ div.soustitrerestitution{
 }
 
 div.article_add_images {
-  border: 5px solid black;
+  border: 5px solid #2f00ff;
+  background-color: #f3f8ff;
   padding : 10px;
   float: right;
   color : white;
@@ -327,7 +346,7 @@ div.titrephoto{
 div.datepub{
   font-family: WhoIs, monospace;
   font-size: 1EM;
-padding-top: 10px;
+  padding-top: 10px;
 }
 
 img.preview{
