@@ -14,7 +14,7 @@ Template.restitution.helpers({
     var images = Images.find({_id: {$nin : ids}}).fetch();
     var data = _.union(articles, images);
     _.each(data, function(media){
-      media.position = {x:getRandomInt(100,500), y: getRandomInt(100,500)};
+      media.position = {x:getRandomInt(10,500), y: getRandomInt(100,500)};
     });
     return data;
   }
