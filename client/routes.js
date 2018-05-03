@@ -49,6 +49,6 @@ Router.route('/restitution', function () {
 });
 
 // Configuration de la route des dépots
-Router.route('/restitution/Jour1', function () {
-    this.render('restitution/Jour1');
+Router.route('/restitution/:jour', function () {
+    this.render('archive');
 });
