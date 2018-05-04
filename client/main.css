@@ -168,10 +168,25 @@ h2 {
   font-weight: normal;
 }
 
+h3 {
+  font-family: "ocl3", sans-serif;
+  font-size : 3EM;
+  line-height: 1EM;
+  font-weight: normal;
+}
+
 div.texte{
   padding: 10px;
   font-family: "WhoIs", monospace;
   font-size: 1EM;
+  color:black;
+}
+
+div.texteimg{
+  padding-bottom: 10px;
+  font-family: "WhoIs", monospace;
+  font-size: 1EM;
+  color:black;
 }
 
 div.preceptes{
@@ -182,6 +197,8 @@ div.preceptes{
   border: 2.5px solid #2f00ff;
   border-style: dashed;
 }
+
+
 
 .guide{
   font-family: "WhoIs", monospace;
@@ -207,6 +224,8 @@ span {
 }
 
 ul {
+  font-family: "WhoIs", monospace;
+  font-size: 1EM;
    list-style-type:none;
 }
 
@@ -233,8 +252,20 @@ div.login > input {
   margin : 5px 0px 5px 0px;
 }
 
-
-a, button {
+.toolbar{
+  line-height: 1.5EM;
+  border: 0px;
+  padding-left: 10px;
+  padding-top: 2px;
+  padding-right: 10px;
+  padding-bottom: 2px;
+  background-color: #2f00ff;
+  color: white;
+  font-family : "WhoIs", monospace;
+  font-size: 1.25EM;
+  text-decoration : none;
+}
+button {
   line-height: 1.5EM;
   border: 0px;
   padding-left: 10px;
@@ -248,7 +279,34 @@ a, button {
   text-decoration : none;
 }
 
+.bottom{
+  padding: 10px;
+  font-family: "WhoIs", monospace;
+  font-size: 0.9EM;
+  color:black;
+  text-decoration: none;
+}
+
+.bottom_link{
+  padding: 10px;
+  font-family: "WhoIs", monospace;
+  font-size: 0.7EM;
+  color:black;
+  text-decoration: underline;
+}
+
 .artimg {
+  line-height: 1.5EM;
+  border: 0px;
+  padding-left: 10px;
+  padding-top: 2px;
+  padding-right: 10px;
+  padding-bottom: 2px;
+  background-color: #2f00ff;
+  color: white;
+  font-family : "WhoIs", monospace;
+  font-size: 1.25EM;
+  text-decoration : none;
   margin:2px;
 }
 
@@ -311,10 +369,15 @@ textarea:hover{
 
 
 .ev_logout{
+  background-color: #2f00ff;
+  color: white;
+  font-family : "WhoIs", monospace;
+  font-size: 1EM;
+  text-decoration : none;
+
   float: right;
-  line-height: 20px;
+  line-height: 1.3EM;
   background-color: #ff0000;
-  font-size: 14px;
   border:0;
   margin: 5px;
   padding:10px;
@@ -409,13 +472,19 @@ div.soustitrerestitution{
 }
 
 div.article_add_images {
+    font-family: WhoIs, monospace;
+    font-size: 1EM;
+  line-height: 1EM;
   border: 5px solid #2f00ff;
   background-color: #f3f8ff;
   padding : 10px;
   float: right;
-  color : white;
+  color : black;
 }
 
+div.textimg{
+  padding-bottom : 10px;
+}
 div.view_files{
   display: flex;
   align-content: flex-start;

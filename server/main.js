@@ -7,5 +7,8 @@ Meteor.startup(() => {
     // First startup, creating admin user.
     console.log("First startup, init app");
     Accounts.createUser({username:"admin", password:"admin"});
+    Accounts.createUser({username:"Baptiste Thevelein", password:"Org@nisationDcables"});
+    Accounts.createUser({username:"Benoît Michaëly", password:"QuiNeS@utepas69"});
+
   }
 });

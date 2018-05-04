@@ -5,7 +5,7 @@
 
   <div class="liste_depots">
     <div class="article_add_images">
-      <h class="addimg">Ajouter une photo :</h>
+      <div class="texteimg">Ajouter une photo :</div>
       {{> uploadForm }}
     </div>
     <div class="texte">Liste des photos en ligne :</div>
@@ -14,7 +14,7 @@
         {{#each image in images}}
           {{> showPhoto image=image}}
         {{else}}
-          <p>Pas encore d'images... :-(</p>
+          <div class="texte">Pas encore d'images... :-(</div>
           {{/each}}
     </ul>
   </div>
