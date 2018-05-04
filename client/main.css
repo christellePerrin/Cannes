@@ -1,4 +1,3 @@
-
 @font-face {
     font-family: "ocl2";
     src: url('/fonts/ocl/ocl2/ocl-2.eot');
@@ -136,7 +135,7 @@
 
 
 body{
-background-color: red;
+  background-color: red;
 }
 
 
@@ -262,7 +261,7 @@ a:hover{
   outline: solid white;
 }
 
-.toolbar: hover{
+.toolbar:hover{
   outline: solid white;
   background-color: red;
   color: white;
@@ -276,7 +275,7 @@ a.active {
 }
 
 
-button: hover{
+button:hover{
   outline: solid black;
   color: white;
 }
@@ -304,7 +303,7 @@ textarea:hover{
 .liste_depots{
   width: 80%;
 }
-.ev_selectArticle : hover {
+.ev_selectArticle:hover {
   color:black;
   text-decoration: underline;
   cursor: pointer;
