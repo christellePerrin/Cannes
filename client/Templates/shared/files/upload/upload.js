@@ -17,7 +17,7 @@ Template.uploadForm.events({
       // multiple files were selected
       instance = template;
       const upload = Images.insert({
-        meta : {createdAt: new Date()},
+        meta : {createdAt: Date.now()},
         file: e.currentTarget.files[0],
         streams: 'dynamic',
         chunkSize: 'dynamic'

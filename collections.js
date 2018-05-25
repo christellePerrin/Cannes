@@ -4,11 +4,11 @@ pathMedia = "";
 
 if(Meteor.isServer){
     console.log("------------------------------------------------------------------");
-    pathMedia = Meteor.absolutePath + '/medias/';
+    /*Meteor.absolutePath +*/ 
+    pathMedia = '/medias/';
     console.log("PATH MEDIA :"+pathMedia);
     console.log("------------------------------------------------------------------");
 };
-
 
 Article.allow({
     insert(userId, doc) {

@@ -5,12 +5,12 @@ Router.configure({
 
 Router.onBeforeAction(function() {
   if (! Meteor.userId()) {
-    this.render('apropos');
+    this.render('restitution');
   } else {
     this.next();
   }
 },{
-  except : ['login','restitution']
+  except : ['login','apropos']
 });
 
 Router.route('/debug', function(){
@@ -20,7 +20,7 @@ Router.route('/debug', function(){
 
 // Configuration de la route racine
 Router.route('/', function () {
-    this.render('apropos');
+    this.render('restitution');
 });
 
 // Configuration de la route des dépots
@@ -46,6 +46,11 @@ Router.route('/login', function () {
 // Configuration de la route des dépots
 Router.route('/restitution', function () {
     this.render('restitution');
+});
+
+// Configuration de la route des dépots
+Router.route('/apropos', function () {
+    this.render('apropos');
 });
 
 // Configuration de la route des dépots

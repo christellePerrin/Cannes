@@ -3,10 +3,6 @@
   transition: 0.2s;
 }
 
-.legendeimg{
-  font-family: WhoIs, monospace;
-  font-size: 1EM;
-}
 
 label{
   font-family: WhoIs, monospace;
@@ -16,7 +12,7 @@ label{
 input{
     background-color: #f3f8ff;
     border-color: #2f00ff;
-    border-width: 10px;
+    border-width: 3px;
     border-style: solid;
     font-family: "WhoIs", monospace;
     font-size: 18px;
@@ -29,5 +25,11 @@ input{
 }
 
 input:focus{
-  color:black;
+    border-color: white;
+  color: black;
+}
+
+input:hover{
+    border-color: white;
+  color: black;
 }

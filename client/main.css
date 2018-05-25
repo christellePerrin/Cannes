@@ -138,6 +138,13 @@ body{
   background-color: red;
 }
 
+/*body{
+  background: #f29f3a;
+  background: -moz-linear-gradient(left, #f29f3a 0%, #ff653f 100%);
+  background: -webkit-linear-gradient(left, #f29f3a 0%,#ff653f 100%);
+  background: linear-gradient(to right, #f29f3a 0%,#ff653f 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f29f3a', endColorstr='#ff653f',GradientType=1 );
+}*/
 
 
 
@@ -166,6 +173,7 @@ h2 {
   font-size : 7EM;
   line-height: 1EM;
   font-weight: normal;
+  color: Lightskyblue;
 }
 
 h3 {
@@ -199,7 +207,6 @@ div.preceptes{
 }
 
 
-
 .guide{
   font-family: "WhoIs", monospace;
   font-size: 0.75EM;
@@ -215,7 +222,7 @@ div.preceptes{
 }
 
 span {
-  color : #2f00ff;
+  color :#2f00ff;
   line-height: 30px;
   margin: 10px 0px 10px 0px;
   font-size: 1EM;
@@ -240,6 +247,12 @@ p {
   font-size:inherit;
 }
 
+a{
+  font-family: "WhoIs", monospace;
+  font-size: 1EM;
+  color:black;
+  padding: 10px;
+}
 div.login > input {
   display: block;
   background-color: black;
@@ -259,10 +272,10 @@ div.login > input {
   padding-top: 2px;
   padding-right: 10px;
   padding-bottom: 2px;
-  background-color: #2f00ff;
+  background-color:#2f00ff;
   color: white;
   font-family : "WhoIs", monospace;
-  font-size: 1.25EM;
+  font-size: 1.5EM;
   text-decoration : none;
 }
 button {
@@ -275,7 +288,7 @@ button {
   background-color: #2f00ff;
   color: white;
   font-family : "WhoIs", monospace;
-  font-size: 1.25EM;
+  font-size: 2EM;
   text-decoration : none;
 }
 
@@ -305,7 +318,7 @@ button {
   background-color: #2f00ff;
   color: white;
   font-family : "WhoIs", monospace;
-  font-size: 1.25EM;
+  font-size: 2EM;
   text-decoration : none;
   margin:2px;
 }
@@ -385,7 +398,8 @@ textarea:hover{
 
 .ev_removeMe {
   text-decoration: none;
-  background-color: #ff0000
+  background-color: #ff0000;
+  color: white;
 }
 
 form.editArticle {
@@ -425,7 +439,7 @@ form.editArticle > textarea.chapo_area {
 
 /*Valider*/
 form.editArticle > button{
-  font-size: 14px;
+  font-size: 1em;
   background-color: #2f00ff;
   color: white;
   border:0;
@@ -434,10 +448,11 @@ form.editArticle > button{
 
 .annuler{
   background-color: #ff0000;
-  font-size: 14px;
+  font-size: 0.8em;
   color: white;
   border:0;
   padding:10px;
+  text-decoration: none;
 }
 
 h.addimg{
@@ -457,19 +472,7 @@ input[type="file" i]{
   display: none;
 }
 
-div.titre_rest{
-  text-align: center;
-  font-family: "ocl3",sans-serif;
-  font-size: 3EM;
-  padding:10px 10px 0px 10px;
-}
 
-div.soustitrerestitution{
-  text-align: center;
-  font-family: WhoIs, monospace;
-  font-size: 2EM;
-  padding:10px;
-}
 
 div.article_add_images {
     font-family: WhoIs, monospace;
@@ -505,7 +508,7 @@ div.titrephoto{
 
 div.datepub{
   font-family: WhoIs, monospace;
-  font-size: 1EM;
+  font-size: 0.9EM;
   padding-top: 10px;
 }
 

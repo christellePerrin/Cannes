@@ -3,35 +3,70 @@
     position: absolute;
     width : 80%;
     transition: 0.5s;
-    top:100px !important;
     left:0 !important;
-    border: 10px solid #2f00ff;
+    border: 20px solid #2f00ff;
     background-color: white;
     margin: 10px;
     padding: 5%;
-    cursor: zoom-in;
+    cursor:pointer;
+    z-index: 10000;
+
     .close {
     display: block;
     }
 }
 
+p{
+  margin-left: 10%;
+  margin-right: 10%;
+
+}
+
 .fullscreen_all{
     position: absolute;
-    width : 80%;
+    width : 60%;
     transition: 0.5s;
-    top:100px !important;
+//    top:100px !important;
     left:0 !important;
-    border: 10px solid #2f00ff;
+    border: 20px solid #2f00ff;
     background-color: white;
     margin: 10px;
     padding: 5%;
-    cursor:normal;
+    cursor:pointer;
+    z-index: 10000;
 
     .close {
       display: block;
     }
-
 }
+
+  div.deploy,.deploy2{
+  position : absolute;
+  top:0%;
+  right:2%;
+  font-family: "WhoIs", sans-serif;
+  color: #2f00ff;
+  font-size: 3EM;
+  font-weight:lighter;
+  cursor:pointer;
+  }
+
+div.deploy_hidden{
+  display: none;
+}
+
+  div.close{
+    position : absolute;
+    top:0%;
+    left:2%;
+    font-family: "WhoIs", sans-serif;
+    font-size: 4EM;
+    color: red;
+    font-weight:lighter;
+    cursor: pointer;
+  }
+
+
 
 .medias {
   position: absolute;
@@ -40,9 +75,30 @@
   border: 10px solid #2f00ff;
   background-color: white;
   margin: 10px;
-  padding: 10px;
-  cursor:move;
-  box-shadow: -10px 10px;
+  padding: 15px;
+  cursor:pointer;
+  box-shadow: -15px 15px black;
+/*  box-shadow:
+  1px 1px Lightskyblue,
+  2px 2px Lightskyblue,
+  3px 3px Lightskyblue,
+  4px 4px Lightskyblue,
+  5px 5px Lightskyblue,
+  6px 6px Lightskyblue,
+  7px 7px Lightskyblue,
+  8px 8px Lightskyblue,
+  9px 9px Lightskyblue,
+  10px 10px Lightskyblue,
+  11px 11px Lightskyblue,
+  12px 12px Lightskyblue,
+  13px 13px Lightskyblue,
+  14px 14px Lightskyblue,
+  15px 15px Lightskyblue,
+  16px 16px Lightskyblue,
+  17px 17px Lightskyblue,
+  18px 18px Lightskyblue,
+  19px 19px Lightskyblue;
+*/
 
   .close {
     display:none;
@@ -51,7 +107,13 @@
 
 .medias:hover{
   background-color: RGB(233,233,233);
+  transform: translate(-1%, -1%);
   width : 26%;
+  box-shadow: -25px 25px;
+  -webkit-transition: all 0.2s ease;
+  z-index: 5000;
+  cursor:pointer;
+
 }
 
 .label-file{
@@ -81,7 +143,7 @@
   display: block;
   padding: 10px;
   font-family: "WhoIs", monospace;
-  font-size : 1.1EM;
+  font-size : 2vw;
   line-height: 1.25EM;
 }
 
@@ -103,18 +165,38 @@
 .preview_hidden{
   display : none;
 }
+
 .auteur {
   font-family: "WhoIs", monospace;
   text-decoration: underline;
-  text-align: center;
+  text-align: left;
   font-size : 1EM;
 }
 
-.close{
-  float: right;
-  font-family: "WhoIs", sans-serif;
-  font-size: 2.5EM;
-  color: red;
-  font-weight:lighter;
-  cursor: pointer;
+div.titre_rest{
+  text-align: left;
+  font-family: "ocl3",sans-serif;
+  font-size: 3vw;
+  color: black;
+  padding:10px 10px 10px 0px;
+
+}
+
+div.soustitrerestitution{
+  text-align: left;
+  font-family: WhoIs, monospace;
+  font-size: 2vw;
+  padding-bottom:10px;
+}
+
+.legendeimg{
+  font-family: WhoIs, monospace;
+  font-size: 1.2EM;
+  padding-top:10px;
+}
+
+.legendeimgbig{
+  font-family: WhoIs, monospace;
+  font-size: 2.2EM;
+  padding-top:10px;
 }

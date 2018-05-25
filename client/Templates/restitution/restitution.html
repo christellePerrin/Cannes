@@ -1,6 +1,7 @@
 
 <template name="restitution">
   <div class="restitution-page">
+
   {{#each media in medias}}
     {{> showMedia media=media}}
   {{else}}
@@ -11,8 +12,9 @@
 
 <template name="showMedia">
     <div class="medias" style="left:{{media.position.x}}px;top:{{media.position.y}}px">
-        <div class="close">x</div>
-         <div class="auteur">Par {{auteur}}</div> <br />
+      <div title="fermer" class="close">x</div>
+      <div title="déployer" class="deploy"></div>
+      <div class="auteur">Par {{auteur}}</div> <br />
  {{> render media}}
     </div>
 </template>
@@ -21,6 +23,7 @@
 <template name="mediaImage">
     <img draggable=false class="preview" src="{{fileURL this}}" alt="{{name}}" />
       <figcaption class="legendeimg">{{meta.legend}}</figcaption>
+      <div class="texte">Publié le {{formatedDate meta.createdAt}}</div>
 </template>
 
 <template name="mediaArticle">
@@ -28,7 +31,7 @@
   {{! showArticleImage image_id}}
   <div class="titre_rest">{{titre}}</div> <br />
   <div class="soustitrerestitution">{{soustitre}}</div>
-  <div class="chapo_hidden">{{chapo}}</div>
+  <div class="chapo_hidden">{{#markdown}}{{chapo}}{{/markdown}}</div>
   <div class="contenu_hidden">{{#markdown}}{{contenu}}{{/markdown}}</div>
   <div class="datepub">Publié le {{formatedDate createdAt}}</div> <br />
 </template>

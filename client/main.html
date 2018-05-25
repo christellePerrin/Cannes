@@ -1,5 +1,5 @@
 <head>
-  <title>Maze/Cannes</title>
+  <title>Maze à Cannes</title>
 </head>
 
 <body>
@@ -17,10 +17,9 @@
 
 <template name="ApplicationLayout">
   <header>
-
-    <a class="toolbar active" href="/">Accueil</a>
-    <a class="toolbar" href="https://maze.fr" target="_blank">Maze Magazine</a>
-    <a class="toolbar" href="/restitution">Festival de Cannes 2018</a>
+    <a class="toolbar active" href="/">Journal de bord</a>
+    <a class="toolbar" href="/apropos">À propos</a>
+    <a class="toolbar" href="https://maze.fr" target="_blank">Retour vers maze.fr</a>
         {{#if currentUser}}
     <a class="toolbar" href="/depot">Interface de dépôt</a>
 
@@ -33,8 +32,8 @@
 
       {{> logout }}
     {{else}}
-      <div class="texte">Pour contribuer, veuillez vous identifier.</div>
-      <a href="/login">Se connecter</a>
+
+
     {{/if}}
 
   </header>
