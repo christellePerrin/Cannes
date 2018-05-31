@@ -9,8 +9,7 @@ Template.restitution.helpers({
    var start = new Date();
     start.setHours(0,0,0,0);
     var end = new Date();
-    end.setHours(123, 59, 59, 999);
-
+    end.setHours(23, 59, 59, 999);
     var articles = Article.find().fetch();
   /*  ne prenant que les articles des derniers 24H (remplacer dans les () du find)
   ({
